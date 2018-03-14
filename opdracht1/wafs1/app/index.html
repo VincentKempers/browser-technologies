@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="static/css/styles.css">
+  <title>app.js</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#gifs">Gifs</a></li>
+      <li><a href="#favourites">My Favourites</a></li>
+      <li><a href="https://github.com/VincentKempers/wafs">Check the github</a></li>
+    </ul>
+  </nav>
+  <section id="gifs">
+    <h1>Search your gifs</h1>
+    <input id="search" type="search" placeholder="gifs">
+    <article id="gif-result">
+      <div>
+        <h2>search all the gifs</h2>
+        <img src="static/imgs/search.gif" alt="girl searching like crazy">
+      </div>
+    </article>
+    <article id="detail-gif"></article>
+  </section>
+  <section id="favourites">
+    <div id="yourFavs"></div>
+    <article id="detail-fav"></article>
+  </section>
+  <script src="static/js/routie.js"></script>
+  <script src="static/js/content.js"></script>
+  <script src="static/js/template-renderer.js"></script>
+  <script src="static/js/api-request.js"></script>
+  <script src="static/js/script.js"></script>
+</body>
+</html>
