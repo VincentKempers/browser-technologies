@@ -21,7 +21,7 @@ Er worden downsampled plaatjes ingeladen. De font en tekst zijn system based. Er
 # Screenreader
 
 Merkte dat de tonatie in het nederlands wordt gedaan terwijl het een engelse website is. Puur waarschijnlijk omdat mijn settings in het nederlands stond.
-Voor de rest legt hij wel uit wat de image is en wat de image alt is. 
+Voor de rest legt hij wel uit wat de image is en wat de image alt is.
 
 # Images vanuit een API
 
@@ -70,6 +70,6 @@ Het contrast van de kleuren werken vrij goed. Mag misschien wat dikkere font som
 
 # What did i test.
 
-- Google dev Network [Network result](network.png)
-- Google dev Audit in Dev Tools [Results Audit](results-audit.png)
+- Google dev Network ![Network result](network.png)
+- Google dev Audit in Dev Tools ![Results Audit](results-audit.png)
 - Verschillende browsers (Inclusief Edge)
