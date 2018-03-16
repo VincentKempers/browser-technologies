@@ -5,6 +5,8 @@
 
 # Problemen
 
+## Grootste problemen
+Geen mobile first design. Dit moet direct gebeuren want de app moet gewoon werken op mobiel.
 
 # Netwerk
 
@@ -12,11 +14,14 @@ Hij doet een call en heeft geen timeout. Alle plaatjes hebben een preview met ee
 Er worden downsampled plaatjes ingeladen. De font en tekst zijn system based. Er is geen custom font er wordt ook geen custom font ingeladen.
 
 - Error: Stel dat je stopt met het laden van de pagina en je probeert toch te typen. Gaat dat niet. Dan krijg je een error binnen.
--
+- Alleen op het moment dat er een 200 is. Dus voor dat de pagina laad moet er al een error afhandelen.
+- Caching van de pagina of pagina's zou handig zijn. Alleen dat de functionaliteit van zoeken vrij lastig is.
+  - Favorieten zou in het geval van cachen wel kunnen.
 
 # Screenreader
+
 Merkte dat de tonatie in het nederlands wordt gedaan terwijl het een engelse website is. Puur waarschijnlijk omdat mijn settings in het nederlands stond.
-Voor de rest legt hij wel uit wat de image is en wat de image alt is.
+Voor de rest legt hij wel uit wat de image is en wat de image alt is. 
 
 # Images vanuit een API
 
@@ -41,6 +46,9 @@ Dit zou je kunnen doen met een database. Hier een ID of User aan te geven om die
 _Ik wil hier toch wat voor verzinnen_
 Javascript is een interessante topic. Gelieve zou ik het willen proberen de core functionaliteit (het zoeken) zonder Javascript willen doen. Wat vrij lastig is natuurlijk. Het is misschien niet viable omdat ik een call doe + strings opsla in local host etc. Maar op zijn minst je favorieten zien en denk ik laten weten of javascript staat uit en de ervaring hier door erg gelimiteerd is.
 
+# Kleur/ Accessibility
+Het contrast van de kleuren werken vrij goed. Mag misschien wat dikkere font soms. Focus states mogen misschien net even wat getweaked worden. Puur om het feit dat hij wel beweegt van waar je bent. Alleen misschien is het nog te subtiel, kleur zou een goede oplossing hier voor zijn.
+
 
 # todo
 
@@ -54,6 +62,9 @@ Javascript is een interessante topic. Gelieve zou ik het willen proberen de core
 - [] Minify the code!
 - [] Compress images!
 - [] Gebruik van cache!
+- [] Focus state tweaken
+  - [] Kleur.
+  - [] iets subtielere animatie (reduced motion: heeft dan alsnog een focus state vanwege kleur) .
 
 
 
