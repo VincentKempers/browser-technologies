@@ -73,3 +73,6 @@ Het contrast van de kleuren werken vrij goed. Mag misschien wat dikkere font som
 - Google dev Network [Network result](network.png)
 - Google dev Audit in Dev Tools [Results Audit](results-audit.png)
 - Verschillende browsers (Inclusief Edge)
+
+
+link: https://vincentkempers.github.io/wafs/app/#gifs
