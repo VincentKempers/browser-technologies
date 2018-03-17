@@ -70,16 +70,13 @@ localStorage is being used in this app. To disable your localStorage in differen
 The localStorage in this app is being used to favourite your gifs. The app stores a string that contains a JSON format to write in the localStorage. This could be stored in your cache to remember or you could have a user login and store the favourites on the server/(account).
 
 
-- Database op de server.
-- Die users onthoud en registreert welke id van de image is opgeslagen.
-- Favorieten zou in het geval van cachen wel kunnen.
-
 #### Todo
+- [ ] Have a database on the server.
+- [ ] Saves the users favourites on the server.
+- [ ] Get the Id's from the server and show them on the web.
 
-
-## Javascript uit
-Javascript is een interessante topic. Gelieve zou ik het willen proberen de core functionaliteit (het zoeken) zonder Javascript willen doen. Wat vrij lastig is natuurlijk. Het is misschien niet viable omdat ik een call doe + strings opsla in local host etc. Maar op zijn minst je favorieten zien en denk ik laten weten of javascript staat uit en de ervaring hier door erg gelimiteerd is.
-
+## Javascript off
+When JavaScript is off the app doesn't work there is no way this app can do it's functionality when JavaScript is off. But i could inform the user when JavaScript is off. Probably make use of <noscript> or Try to make the favourites functionality slightly work by showing you.
 
 ## Minify the code
 
@@ -92,8 +89,8 @@ Javascript is een interessante topic. Gelieve zou ik het willen proberen de core
 #### Todo
 
 
-## Kleur/ Accessibility
-Het contrast van de kleuren werken vrij goed. Mag misschien wat dikkere font soms. Focus states mogen misschien net even wat getweaked worden. Puur om het feit dat hij wel beweegt van waar je bent. Alleen misschien is het nog te subtiel, kleur zou een goede oplossing hier voor zijn.
+## Colourblind / Accessibility
+The colours could use a slight redo.
 
 #### Todo
 
