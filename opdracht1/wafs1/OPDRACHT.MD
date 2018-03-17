@@ -136,9 +136,6 @@ Problems i found:
 
 #### Todo
 
-##### todo
-
-
 * [ ] Op mobiel de gifs ophalen als stilstaande plaatjes (indien reduced motion aanstaat).
 * [ ] Splash screen.
 * [ ] Service worker.
@@ -154,5 +151,8 @@ Problems i found:
 
 ## What did i test.
 
+<<<<<<< HEAD
 - Google dev Network ![Network result](docImages/network.png)
 - Google dev Audit in Dev Tools ![Results Audit](docImages/results-audit.png)
+
+link: https://vincentkempers.github.io/wafs/app/#gifs
