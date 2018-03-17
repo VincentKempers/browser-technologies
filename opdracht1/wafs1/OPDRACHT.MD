@@ -1,75 +1,158 @@
-# Resultaat opdrachten
+# Result Assignments
 
-- [x] Zet je code op Github
-- [x] Schrijf een Readme met een beschrijving van de problemen die je hebt gevonden, hoe je die hebt opgelost, of hoe je dit zou oplossen (met todo’s) als je genoeg tijd en budget zou hebben.
+- [x] Your code on Github.
+- [x] Write a Readme with a description of the problem that you have encountered, how did you fix them or how could you fix them (with todo's) if you had enough time.
 
-# Problemen
+## Biggest problem right now.
+There isn't a mobile interface right now. You can't navigate the results after you entered your search.
 
-## Grootste problemen
-Geen mobile first design. Dit moet direct gebeuren want de app moet gewoon werken op mobiel.
+#### Todo
+- [ ] Make a mobile friendly version.
 
-# Netwerk
+## Network
 
-Hij doet een call en heeft geen timeout. Alle plaatjes hebben een preview met een lage size. Die size is veel kleiner dan een normale gif.
-Er worden downsampled plaatjes ingeladen. De font en tekst zijn system based. Er is geen custom font er wordt ook geen custom font ingeladen.
+My app doesn't have a timeout or a loader in that sense. So the user wouldn't know what is going on.
 
-- Error: Stel dat je stopt met het laden van de pagina en je probeert toch te typen. Gaat dat niet. Dan krijg je een error binnen.
-- Alleen op het moment dat er een 200 is. Dus voor dat de pagina laad moet er al een error afhandelen.
-- Caching van de pagina of pagina's zou handig zijn. Alleen dat de functionaliteit van zoeken vrij lastig is.
-  - Favorieten zou in het geval van cachen wel kunnen.
+![The load on after a search]()
+_The load on after a search can take a long time on low network._
 
-# Screenreader
+If internet fails while loading the page nothing happends but when you already loaded the site and the internet fails. You get an error message. That error message isn't specific but it will let the user know "Something is wrong!". There should be a better 200 handeler.
 
-Merkte dat de tonatie in het nederlands wordt gedaan terwijl het een engelse website is. Puur waarschijnlijk omdat mijn settings in het nederlands stond.
-Voor de rest legt hij wel uit wat de image is en wat de image alt is.
+![Error message in the app]()
+_Error message in the app tested with google chrome dev network._
 
-# Images vanuit een API
+The CSS in the app isn't that much! But it could load a bit faster with critical CSS.
 
-Helaas kan ik er niet echt veel meer aan doen dan dat er is.
-Dingen die ik al heb toegepast is:
-- Images voorzien van een alt tag.
-- Titel bij het plaatje.
-- Alt ingevuld.
-- vanuit preview het volledige HD plaatje later genereren.
+![Showing the paint of the webpage]()
+_Showing the paint of the webpage on in Chrome Developer tools network_
 
-# localStorage - Cookies ?
+I could fix this with critical CSS and minify my CSS to save some time and make the app a bit lighter to load!
+> [Source: critical css](https://criticalcss.com/)
 
-Localstorage is een feature die je gevaforiete gifs onthoud.
-Het is niet zo zeer de core function van mijn app het is een extra. Op het moment dat de localStorage uit is, is er geen manier om je gifs op te slaan.
-Dit zou je kunnen doen met een database. Hier een ID of User aan te geven om die de server te plaatsen zodat, het toch wordt opgeslagen.
+#### Todo
+
+
+## Screenreader
+
+How I tested the Screenreader was with macOS built-in Screenreader function. Things i noticed:
+
+- [ ] Titles being read twice.
+- [ ] Sometimes the tone of voice is kind of weird.
+
+Tested on:
+![Image of the screenreader app i use]()
+_Image of the screenreader app i use_
+
+![Image of the screenreader app i use]()
+_Image of the screenreader app i use on mobile_
+
+#### Todo
+
+- [x] leave the `alt=""` attribute empty
+
+## Images from the API
+
+Having network in mind the previews you see are downsampled. This means it saves some time to get the gifs. To preview this i used the originals to preview on slow network, and preview the downsampled to show the speeds.
+
+![original image speeds]()
+_original image speeds_
+
+![downsampled image speeds]()
+_original image speeds_
+
+- [ ] No alt tag on the images and let it read the title!
+- [ ] On reduced motion show the still image. and when clicked show the downsampled image.
+
+## localStorage - Cookies
+
+localStorage is being used in this app. To disable your localStorage in different browsers you sometimes need to access your about.config or it's being found in your settings. [Here is a explination on how](https://stackoverflow.com/questions/17882647/can-user-disable-html5-sessionstorage#25050910).
+
+The localStorage in this app is being used to favourite your gifs. The app stores a string that contains a JSON format to write in the localStorage. This could be stored in your cache to remember or you could have a user login and store the favourites on the server/(account).
+
 
 - Database op de server.
 - Die users onthoud en registreert welke id van de image is opgeslagen.
+- Favorieten zou in het geval van cachen wel kunnen.
+
+#### Todo
 
 
-# Javascript uit
-_Ik wil hier toch wat voor verzinnen_
+## Javascript uit
 Javascript is een interessante topic. Gelieve zou ik het willen proberen de core functionaliteit (het zoeken) zonder Javascript willen doen. Wat vrij lastig is natuurlijk. Het is misschien niet viable omdat ik een call doe + strings opsla in local host etc. Maar op zijn minst je favorieten zien en denk ik laten weten of javascript staat uit en de ervaring hier door erg gelimiteerd is.
 
-# Kleur/ Accessibility
+
+## Minify the code
+
+#### Minify CSS
+
+#### Todo
+
+#### Minify JS
+
+#### Todo
+
+
+## Kleur/ Accessibility
 Het contrast van de kleuren werken vrij goed. Mag misschien wat dikkere font soms. Focus states mogen misschien net even wat getweaked worden. Puur om het feit dat hij wel beweegt van waar je bent. Alleen misschien is het nog te subtiel, kleur zou een goede oplossing hier voor zijn.
 
-
-# todo
-
-- [] Database er aan hangen.
-- [] Iets van Critical CSS eraan hangen. Ongeacht dat de app vrij licht is op CSS.
-- [] Op mobiel de gifs ophalen als stilstaande plaatjes (indien reduced motion aanstaat).
-- [] Splash screen.
-- [] Service worker.
-- [] Eerst mobile first en Critical CSS
-- [] Javascript uit toch nog wat kunnen doen.
-- [] Minify the code!
-- [] Compress images!
-- [] Gebruik van cache!
-- [] Focus state tweaken
-  - [] Kleur.
-  - [] iets subtielere animatie (reduced motion: heeft dan alsnog een focus state vanwege kleur) .
+#### Todo
 
 
 
-# What did i test.
+## browsers
 
-- Google dev Network ![Network result](network.png)
-- Google dev Audit in Dev Tools ![Results Audit](results-audit.png)
-- Verschillende browsers (Inclusief Edge)
+### Tested on Firefox
+Problems i found:
+
+#### Todo
+
+### Tested on Opera
+Problems i found:
+
+#### Todo
+
+### Tested on Opera Mini
+Problems i found:
+
+#### Todo
+
+### Tested on Safari
+Problems i found:
+
+#### Todo
+
+### Tested on Microsoft Edge
+Problems i found:
+
+#### Todo
+
+### Tested on Internet Explorer
+Problems i found:
+
+#### Todo
+
+### Tested on The Device Lab
+Problems i found:
+
+#### Todo
+
+##### todo
+
+
+* [ ] Op mobiel de gifs ophalen als stilstaande plaatjes (indien reduced motion aanstaat).
+* [ ] Splash screen.
+* [ ] Service worker.
+* [ ] Eerst mobile first en Critical CSS
+* [ ] Javascript uit toch nog wat kunnen doen.
+* [ ] Minify the code!
+* [ ] Gebruik van cache!
+* [ ] Focus state tweaken
+  * [ ] Kleur.
+  * [ ] iets subtielere animatie (reduced motion: heeft dan alsnog een focus state vanwege kleur) .
+
+
+
+## What did i test.
+
+- Google dev Network ![Network result](docImages/network.png)
+- Google dev Audit in Dev Tools ![Results Audit](docImages/results-audit.png)
