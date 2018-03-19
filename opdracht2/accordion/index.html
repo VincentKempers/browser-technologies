@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Accordion</title>
+  <style>
+
+  body {
+    margin: 0;
+  }
+
+  .accordion {
+      background-color: grey;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      font-size: 15px;
+      transition: 0.4s;
+  }
+
+  .active, .accordion:hover {
+      background-color: #ccc;
+  }
+
+  .content {
+      padding:1.2em;
+      display: none;
+      color: black;
+      background-color: white;
+
+  }
+  </style>
+</head>
+<body>
+<section class="accordion">
+  <p>Joost</p>
+  <article class="content">
+    <p>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+    </p>
+    <p><a href="https://twitter.com/joost_faber">@joost_faber</a></p>
+  </article>
+</section>
+<section class="accordion">
+  <p>Titus</p>
+  <article class="content">
+    <p>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+    </p>
+    <p><a href="https://twitter.com/wooorm">@wooorm</a></p>
+  </article>
+</section>
+<section class="accordion">
+  <p>Vasilis</p>
+  <article class="content">
+    <p>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+    </p>
+    <p><a href="https://twitter.com/vasilis">@vasilis</a></p>
+  </article>
+</section>
+
+
+  <script type="text/javascript">
+    var menu = document.getElementsByClassName('accordion');
+
+    console.log(menu);
+    for (var i = 0; i < menu.length; i++) {
+      menu[i].addEventListener("click", function() {
+        console.log(this);
+      this.classList.toggle("active");
+      var content = this.children[1];
+      console.log(content);
+      if (content.style.display === "block") {
+          content.style.display = "none";
+      } else {
+          content.style.display = "block";
+      }
+  });
+}
+  </script>
+</body>
+</html>
