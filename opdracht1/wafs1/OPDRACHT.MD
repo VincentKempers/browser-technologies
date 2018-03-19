@@ -129,7 +129,7 @@ The main browser i use is Google Chrome. I use this to test all my code and make
 
 ### Tested on Firefox
 Problems i found:
-![](docImages/firefox.png)
+![Firefox search](docImages/firefox.png)
 _Looking for rick in the app on firefox_
 
 
@@ -140,7 +140,7 @@ _Looking for rick in the app on firefox_
 Problems i found:
 ![](docImages/opera.png)
 
-When tabbed on inside the app the 
+When tabbed on inside the app the
 #### Todo
 
 ### Tested on Opera Mini
@@ -150,10 +150,10 @@ Problems i found:
 
 ### Tested on Safari
 Problems i found:
-![](docImages/safari-landing.png)
+![safari landing page](docImages/safari-landing.png)
 _Apparently the search field looks very weird in safari._
 
-![](docImages/safari.png)
+![Safari test](docImages/safari.png)
 _It looks the same_
 
 There is a weird bug when you try to tab in safari. It is trying to reload in all the images, even though i am tabbed in the search bar. This is probably the active search call that is happening (when you type). When you focus on a search there is a very small moment when this happens.
@@ -162,25 +162,56 @@ There is a weird bug when you try to tab in safari. It is trying to reload in al
 
 ### Tested on Microsoft Edge
 Problems i found:
-![Microsoft Edge]()
+![Microsoft Edge test](docImages/microsoft-edge-edit.png)
 #### Todo
 
-### Tested on Internet Explorer
+
+
+### Tested on Internet Explorer 11
 Problems i found:
+![Internet Explorer 11](docImages/Internet-explorer-11.png)
+_Issues i found on internet explorer 11_
+
+I tested the internet explorer on a pretty bad monitor (not because all IE11 users have bad monitors)
+
+Internet Explorer 11 giving me errors about ES6 template literals.
+```JS
+ var html = `<h1>${name}</h1>`; // the "``" is a problem in IE11
+ ```
+He refuses to make the call because of the ES6 elements. this problem could be fixed if i used vanilla JavaScript templating.
+example:
+```JS
+ var html = "<h1>" + name + " </h1>"; // Should be fixed now!
+ ```
+I was mostly concerned by display grid. But it has partial support if the `-ms-` prefix is used.
+
+Tabbing through IE11 wasn't really a problem. But knowing where you were was. The browser standard focus wasn't good enough to know what was going on or knowing where you left. Redesign the focus state, don't use animations on IE11 and definitely make the contrast better.
+
+In the navigation the letters are too thin. Rather use bold letters because the links are just horrible too see on a bad monitor.
 
 #### Todo
+
+- [ ] Write the templating in vanilla JavaScript.
+- [ ] Use `-ms-` prefix!.
+- [ ] The focus states on ie11 (the animation) doesn't work.
+- [ ] When tabbed the focus state of the browser is minimal. Need to make a more expressive focus state.
+- [ ] noticed that browser didn't like redoing the call every time, definitely need a spinner/loader.
+
 
 ### Tested on The Device Lab
 Problems i found:
+First things first some of the older devices couldn't even reach my app because they gave a (something is wrong with the page error)! Most of the devices showed my page but the core functionality didn't work, because there wasn't a HTTPS request. It would do animations and you can type but the call isn't made.
+
+The website isn't responsive so there are loads of bugs and errors!
+
+![Kindle Error](docImages/Kindle.png) ![Kindle Error](docImages/android-samsung-phone.png) ![Kindle Error](docImages/photo-android-phone.png)
 
 #### Todo
 
-* [ ] Op mobiel de gifs ophalen als stilstaande plaatjes (indien reduced motion aanstaat).
-
-* [ ] Eerst mobile first en Critical CSS
-* [ ] Javascript uit toch nog wat kunnen doen.
-* [ ] Minify the code!
-* [ ] Gebruik van cache!
+* [ ] HTTPS connection with the API (This is possible with giphy).
+* [ ] Not responsive.
+* [ ] couldn't save favourites.
+* [ ] Not responsive.
 
 
 
@@ -189,10 +220,14 @@ Problems i found:
 - Google dev Lighthouse in Dev Tools ![Results Audit](docImages/results-audit.png)
 
 #### Todo
-* [ ] HTTPS connection with the API.
+
 * [ ] Splash screen.
 * [ ] Service worker.
-
+* [ ] Op mobiel de gifs ophalen als stilstaande plaatjes (indien reduced motion aanstaat).
+* [ ] Eerst mobile first en Critical CSS
+* [ ] Javascript uit toch nog wat kunnen doen.
+* [ ] Minify the code!
+* [ ] Gebruik van cache!
 
 ## Link to the app
 
