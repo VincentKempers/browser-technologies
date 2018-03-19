@@ -1,5 +1,5 @@
 # Browser Technologies
-//Robuuste, toegankelijke websites leren bouwen … 
+//Robuuste, toegankelijke websites leren bouwen …
 
 ## Opdracht 2 - 1, 2, 3 Feature Detectie
 Zoek uit HTML, CSS & JS per onderwerp 2 voor jou nieuwe features om te onderzoeken en fallback voor te bouwen. Gebruik html5test.com, css3test.com en kangax.github.io/compat-table/es6/
@@ -15,5 +15,3 @@ criteria
 -		Bronnen van uitleg en gebruikte artikelen.
 -		Welke browsers/devices ondersteunen deze wel/niet.
 -		Een beschrijving hoe de fallback werkt.
-
- 
