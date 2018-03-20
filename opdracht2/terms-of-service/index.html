@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Overlay</title>
+  <style>
+    #TOS { /* For dimming */
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0,0,0,.8);
+    }
+    aside {
+      background-color: white;
+      margin-top: 4em;
+    }
+
+    h2 {
+      display: block;
+      margin: 0 auto;
+    }
+
+    article {
+      display: block;
+      margin: 0 auto;
+      height: 40em;
+      width: 30em;
+      overflow: scroll;
+    }
+
+    section {
+      display: inline-block;
+      margin: 0 auto;
+    }
+
+  </style>
+</head>
+<body>
+  <a id="link" href="#TOS">Terms of Service</a>
+  <div id=TOS>
+    <aside>
+      <h2>Terms of Service</h2>
+      <article>
+        <h3>I. Terms</h3>
+        <p>
+          Qui dolor eaque neque quia libero blanditiis facilis. Et recusandae ut iusto ut doloremque quo enim non. Atque voluptatibus facilis itaque.          Vero fugit voluptatem atque ipsa id commodi quos aliquam. Est unde distinctio neque. Et vel nemo ducimus accusamus minus facilis est rerum. Molestiae ut sunt labore.
+
+          Ea sequi consectetur nam ducimus veniam ducimus iusto velit. Eaque accusamus hic ut molestiae ducimus. Incidunt sunt et corporis voluptas quo veniam. Architecto perspiciatis vero nihil error eius esse. Voluptas non ea aut quas nihil. Totam odit voluptatum dolor.
+
+          A et sit non. Tempora est temporibus minus sequi. Ipsa libero voluptatem culpa totam illo omnis velit id. Et laboriosam nobis ut qui dolorum corrupti autem consectetur.
+
+          Neque voluptates est neque hic minus doloribus aliquid. Officiis nostrum possimus qui est omnis eaque. Voluptas dolores nemo architecto fuga sit iste natus.
+        </p>
+        <h3>II. Of Service</h3>
+        <p>
+          Qui dolor eaque neque quia libero blanditiis facilis. Et recusandae ut iusto ut doloremque quo enim non. Atque voluptatibus facilis itaque.
+
+          Vero fugit voluptatem atque ipsa id commodi quos aliquam. Est unde distinctio neque. Et vel nemo ducimus accusamus minus facilis est rerum. Molestiae ut sunt labore.
+
+          Ea sequi consectetur nam ducimus veniam ducimus iusto velit. Eaque accusamus hic ut molestiae ducimus. Incidunt sunt et corporis voluptas quo veniam. Architecto perspiciatis vero nihil error eius esse. Voluptas non ea aut quas nihil. Totam odit voluptatum dolor.
+
+          A et sit non. Tempora est temporibus minus sequi. Ipsa libero voluptatem culpa totam illo omnis velit id. Et laboriosam nobis ut qui dolorum corrupti autem consectetur.
+
+          Neque voluptates est neque hic minus doloribus aliquid. Officiis nostrum possimus qui est omnis eaque. Voluptas dolores nemo architecto fuga sit iste natus.
+        </p>
+      </article>
+      <section>
+        <label for="input">
+          <input type="checkbox">
+          I have read the terms of service and ACCEPT them.
+        </label>
+        <label for="input">
+          <input type="checkbox">
+          I'd like to recieve the Terms of Service via mail.
+        </label>
+        <button>Naww</button>
+        <button>Yahh</button>
+      </section>
+    </aside>
+  </div>
+
+  <script>
+    var link = document.getElementById("link");
+    var toS = document.getElementById("TOS");
+
+    link.addEventListener("click", function(){
+      if (toS.style.display === "none") {
+        toS.style.display = "block";
+      } else {
+        toS.style.display = "none";
+      }
+    },true)
+
+  </script>
+</body>
+</html>
