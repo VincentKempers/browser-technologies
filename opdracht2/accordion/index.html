@@ -25,11 +25,10 @@
   }
 
   .content {
-      padding:1.2em;
+      padding: 1.2em;
       display: none;
       color: black;
       background-color: white;
-
   }
   </style>
 </head>
@@ -70,16 +69,16 @@
     for (var i = 0; i < menu.length; i++) {
       menu[i].addEventListener("click", function() {
         console.log(this);
-      this.classList.toggle("active");
-      var content = this.children[1];
-      console.log(content);
-      if (content.style.display === "block") {
+        this.classList.toggle("active");
+        var content = this.children[1];
+        console.log(content);
+        if (content.style.display === "block") {
           content.style.display = "none";
-      } else {
+        } else {
           content.style.display = "block";
-      }
-  });
-}
+        }
+      });
+    }
   </script>
 </body>
 </html>

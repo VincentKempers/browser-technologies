@@ -11,7 +11,7 @@ criteria
 - 6 features zijn onderzocht en er is een demo gemaakt.
 - De code staat in een repository op GitHub.
 - Een Readme is toegevoegd met, per feature:
--		Een beschrijving van de feature.
--		Bronnen van uitleg en gebruikte artikelen.
--		Welke browsers/devices ondersteunen deze wel/niet.
--		Een beschrijving hoe de fallback werkt.
+  -	Een beschrijving van de feature.
+  -	Bronnen van uitleg en gebruikte artikelen.
+  -	Welke browsers/devices ondersteunen deze wel/niet.
+  -	Een beschrijving hoe de fallback werkt.

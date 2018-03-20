@@ -7,7 +7,7 @@
   <title>Overlay</title>
   <style>
 
-    #TOS { /* For dimming */
+    #tos { /* For dimming */
       display: none;
       position: fixed;
       top: 0;
@@ -32,7 +32,7 @@
     article {
       display: block;
       margin: 0 auto;
-      height: 40em;
+      height: 20em;
       width: 30em;
       overflow: scroll;
     }
@@ -58,7 +58,7 @@
 </head>
 <body>
   <a id="link" href="#TOS">Terms of Service</a>
-  <div id=TOS>
+  <div id="tos">
     <aside>
       <h2>Terms of Service</h2>
       <article>
@@ -107,16 +107,16 @@
           I'd like to recieve the Terms of Service via mail.
         </label>
       </section>
-      <section>
-          <button>No</button>
-          <button>Yes</button>
-      </section>
+        <form action="index.html" method="post">
+          <a href="/"><button>No</button></a>
+          <a href="/"><button>Yes</button></a>
+        </form>
     </aside>
   </div>
 
   <script>
     var link = document.getElementById("link");
-    var toS = document.getElementById("TOS");
+    var toS = document.getElementById("tos");
 
     link.addEventListener("click", function(){
       if (toS.style.display === "none") {
@@ -124,7 +124,7 @@
       } else {
         toS.style.display = "none";
       }
-    },true)
+    },false)
 
   </script>
 </body>
