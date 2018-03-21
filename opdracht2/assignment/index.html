@@ -170,6 +170,13 @@
   </aside>
 </div>
   <script type="text/javascript">
+
+  if("getElementsByClassName" in document) {
+    console.dir(document);
+} else {
+  console.log("not around");
+}
+
     var menu = document.getElementsByClassName('accordion');
 
     for (var i = 0; i < menu.length; i++) {
