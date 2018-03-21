@@ -36,6 +36,57 @@
         background-color: white;
         margin: 1em;
     }
+
+    /* Terms of service */
+         #tos { /* For dimming */
+           position: fixed;
+           top: 0;
+           right: 0;
+           bottom: 0;
+           left: 0;
+           background: rgba(0,0,0,.8);
+         }
+
+         aside {
+           background-color: white;
+           margin-top: 4em;
+         }
+
+         aside > h2 {
+           display: block;
+           text-align: center;
+           margin: 1em;
+           padding: 1em;
+         }
+
+         aside article {
+           display: block;
+           margin: 0 auto;
+           height: 20em;
+           width: 30em;
+           overflow-y: scroll;
+         }
+
+         aside section {
+           display: flex;
+           flex-direction: row;
+           justify-content: space-between;
+           margin: 2em;
+         }
+
+         aside section:first-of-type{
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+         }
+         aside form {
+           display: flex;
+           justify-content: center;
+         }
+
+         aside button {
+           margin: 2em;
+         }
   </style>
 </head>
 <body>
@@ -66,6 +117,58 @@
     <p><a href="https://twitter.com/vasilis">@vasilis</a></p>
   </article>
 </section>
+<a id="link" href="#TOS">Terms of Service</a>
+<div id="tos">
+  <aside>
+    <h2>Terms of Service</h2>
+    <article>
+      <h3>I. Terms</h3>
+      <p>
+        Qui dolor eaque neque quia libero blanditiis facilis. Et recusandae ut iusto ut doloremque quo enim non. Atque voluptatibus facilis itaque.          Vero fugit voluptatem atque ipsa id commodi quos aliquam. Est unde distinctio neque. Et vel nemo ducimus accusamus minus facilis est rerum. Molestiae ut sunt labore.
+
+        Ea sequi consectetur nam ducimus veniam ducimus iusto velit. Eaque accusamus hic ut molestiae ducimus. Incidunt sunt et corporis voluptas quo veniam. Architecto perspiciatis vero nihil error eius esse. Voluptas non ea aut quas nihil. Totam odit voluptatum dolor.
+
+        A et sit non. Tempora est temporibus minus sequi. Ipsa libero voluptatem culpa totam illo omnis velit id. Et laboriosam nobis ut qui dolorum corrupti autem consectetur.
+
+        Neque voluptates est neque hic minus doloribus aliquid. Officiis nostrum possimus qui est omnis eaque. Voluptas dolores nemo architecto fuga sit iste natus.
+      </p>
+      <h3>II. Of Service</h3>
+      <p>
+        Qui dolor eaque neque quia libero blanditiis facilis. Et recusandae ut iusto ut doloremque quo enim non. Atque voluptatibus facilis itaque.
+
+        Vero fugit voluptatem atque ipsa id commodi quos aliquam. Est unde distinctio neque. Et vel nemo ducimus accusamus minus facilis est rerum. Molestiae ut sunt labore.
+
+        Ea sequi consectetur nam ducimus veniam ducimus iusto velit. Eaque accusamus hic ut molestiae ducimus. Incidunt sunt et corporis voluptas quo veniam. Architecto perspiciatis vero nihil error eius esse. Voluptas non ea aut quas nihil. Totam odit voluptatum dolor.
+
+        A et sit non. Tempora est temporibus minus sequi. Ipsa libero voluptatem culpa totam illo omnis velit id. Et laboriosam nobis ut qui dolorum corrupti autem consectetur.
+
+        Neque voluptates est neque hic minus doloribus aliquid. Officiis nostrum possimus qui est omnis eaque. Voluptas dolores nemo architecto fuga sit iste natus.
+      </p>
+      <h3>III. More Service Things</h3>
+      <p>
+        Qui dolor eaque neque quia libero blanditiis facilis. Et recusandae ut iusto ut doloremque quo enim non. Atque voluptatibus facilis itaque.
+
+        Vero fugit voluptatem atque ipsa id commodi quos aliquam. Est unde distinctio neque. Et vel nemo ducimus accusamus minus facilis est rerum. Molestiae ut sunt labore.
+
+        Ea sequi consectetur nam ducimus veniam ducimus iusto velit. Eaque accusamus hic ut molestiae ducimus. Incidunt sunt et corporis voluptas quo veniam. Architecto perspiciatis vero nihil error eius esse. Voluptas non ea aut quas nihil. Totam odit voluptatum dolor.
+
+        A et sit non. Tempora est temporibus minus sequi. Ipsa libero voluptatem culpa totam illo omnis velit id. Et laboriosam nobis ut qui dolorum corrupti autem consectetur.
+
+        Neque voluptates est neque hic minus doloribus aliquid. Officiis nostrum possimus qui est omnis eaque. Voluptas dolores nemo architecto fuga sit iste natus.
+      </p>
+    </article>
+    <section>
+      <label for="input">
+        <input type="checkbox">
+        I have read the terms of service and ACCEPT them.
+      </label>
+    </section>
+      <form action="index.html" method="post">
+        <a href="/"><button>No</button></a>
+        <a href="/"><button>Yes</button></a>
+      </form>
+  </aside>
+</div>
   <script type="text/javascript">
     var menu = document.getElementsByClassName('accordion');
 
@@ -83,6 +186,18 @@
         }
       });
     }
+
+      var link = document.getElementById("link");
+      var toS = document.getElementById("tos");
+      toS.style.display = "none";
+
+      link.addEventListener("click", function(){
+        if (toS.style.display === "none") {
+          toS.style.display = "block";
+        } else {
+          toS.style.display = "none";
+        }
+      },false)
   </script>
 </body>
 </html>
