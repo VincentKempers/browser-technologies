@@ -60,6 +60,7 @@ On opera mini it won't work because of the way opera works. It saves data to sen
 ## Fallbacks
 
 * flexbox
+
 ```CSS
 element {
 /* for older browsers IE9 and down the line */
@@ -70,24 +71,37 @@ Newer browsers wont */
 }
 ```
 
+* Creating a fallback for JavaScript
 
+```JS
+if("getElementsByClassName" in document) {
+  // Run the code with get getElementsByClassName
+  console.dir(document);
+} else {
+  // run the code with a different selector
+  console.log("Not supported");
+}
+```
 
 # link + overlay
+I made a terms of service on this page so you can accept and decline and fill a checkbox. A background color is added to identify the user that this is the main "thing". You can exit anytime and it's made completely with CSS so there isn't that much Javascript going on. On the part of positioning i used `display: flex;`.
 
-On the part of positioning i used `display: flex;`.
 
-
--	Bronnen van uitleg en gebruikte artikelen.
 ## Sources
 * [quirksmode table of contents about all selectors](https://quirksmode.org/dom/core/#fivemethods)
 * [Impressive web CSS3 support in IE9](https://www.impressivewebs.com/css3-support-ie9/)
+* [can i use](https://caniuse.com/)
 
 -	Welke browsers/devices ondersteunen deze wel/niet.
 
 ## Browser support
+Because of the low Javascript usage are there only some CSS fallbacks needed to be created.
+* Em's work til IE 9 without being buggy.
+* Usage of `display: flex;`.
+* `:target` psuedo element should be supported on every browser except Opera mini and IE 7.
+
 
 ### Javascript
-
 ![Support for getElementById](docImages/getElementById.png)
 _The support for getElementById_
 
@@ -97,18 +111,3 @@ _The support for NextSibling_
 ### CSS
 ![Support for flexbox](docImages/displayflex.png)
 _The support for flexbox_
-
-
-
-## fallback
-
-* Flexbox fallback
-```CSS
-element {
-/* for older browsers IE9 and down the line */
-  display: table;
-/* older browser will not understand flex and ignore it.
-Newer browsers wont */
-  display: flex;
-}
-```
