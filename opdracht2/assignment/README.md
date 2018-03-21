@@ -64,7 +64,9 @@ On opera mini it won't work because of the way opera works. It saves data to sen
 ```CSS
 element {
 /* for older browsers IE9 and down the line */
-  display: table;
+  display: block;
+  float: left;
+  margin: 0 auto; /* or display: table;  */
 /* older browser will not understand flex and ignore it.
 Newer browsers wont */
   display: flex;
