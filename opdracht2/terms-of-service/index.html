@@ -8,7 +8,6 @@
   <style>
 
     #tos { /* For dimming */
-      display: none;
       position: fixed;
       top: 0;
       right: 0;
@@ -34,7 +33,7 @@
       margin: 0 auto;
       height: 20em;
       width: 30em;
-      overflow: scroll;
+      overflow-y: scroll;
     }
 
     section {
@@ -49,11 +48,14 @@
       justify-content: center;
       align-items: center;
     }
+    form {
+      display: flex;
+      justify-content: center;
+    }
 
     button {
       margin: 2em;
     }
-
   </style>
 </head>
 <body>
@@ -102,10 +104,6 @@
           <input type="checkbox">
           I have read the terms of service and ACCEPT them.
         </label>
-        <label for="input">
-          <input type="checkbox">
-          I'd like to recieve the Terms of Service via mail.
-        </label>
       </section>
         <form action="index.html" method="post">
           <a href="/"><button>No</button></a>
@@ -117,6 +115,7 @@
   <script>
     var link = document.getElementById("link");
     var toS = document.getElementById("tos");
+    toS.style.display = "none";
 
     link.addEventListener("click", function(){
       if (toS.style.display === "none") {

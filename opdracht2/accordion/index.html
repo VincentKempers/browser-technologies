@@ -6,30 +6,29 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Accordion</title>
   <style>
+    body {
+      margin: 0;
+    }
 
-  body {
-    margin: 0;
-  }
+    .accordion {
+        background-color: grey;
+        color: white;
+        cursor: pointer;
+        padding: 1em;
+        font-size: 1em;
+        transition: .5s;
+        max-width: 50vw;
+    }
 
-  .accordion {
-      background-color: grey;
-      color: white;
-      cursor: pointer;
-      padding: 2em;
-      font-size: 15px;
-      transition: .2s;
-  }
+    .active, .accordion:hover {
+        background-color: #ccc;
+    }
 
-  .active, .accordion:hover {
-      background-color: #ccc;
-  }
-
-  .content {
-      padding: 1.2em;
-      display: none;
-      color: black;
-      background-color: white;
-  }
+    .content {
+        padding: 1.2em;
+        color: black;
+        background-color: white;
+    }
   </style>
 </head>
 <body>
@@ -65,13 +64,12 @@
   <script type="text/javascript">
     var menu = document.getElementsByClassName('accordion');
 
-    console.log(menu);
     for (var i = 0; i < menu.length; i++) {
       menu[i].addEventListener("click", function() {
-        console.log(this);
         this.classList.toggle("active");
+
         var content = this.children[1];
-        console.log(content);
+
         if (content.style.display === "block") {
           content.style.display = "none";
         } else {
