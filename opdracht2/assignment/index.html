@@ -10,6 +10,10 @@
       margin: 0;
     }
 
+    a[href*="#"] {
+      text-decoration: none;
+    }
+
     .accordion {
         background-color: grey;
         color: white;
@@ -17,6 +21,7 @@
         padding: 1em;
         font-size: 1em;
         transition: .5s;
+        max-width: 50%;
         max-width: 50vw;
     }
 
@@ -26,15 +31,17 @@
 
     .content {
         padding: 1.2em;
+        display: block;
         color: black;
         background-color: white;
+        margin: 1em;
     }
   </style>
 </head>
 <body>
 <section class="accordion">
-  <p>Joost</p>
-  <article class="content">
+  <a href="#joost">Joost</a>
+  <article class="content" id="joost">
     <p>
       Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
     </p>
@@ -42,8 +49,8 @@
   </article>
 </section>
 <section class="accordion">
-  <p>Titus</p>
-  <article class="content">
+  <a href="#titus">Titus</a>
+  <article class="content" id="titus">
     <p>
       Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
     </p>
@@ -51,29 +58,28 @@
   </article>
 </section>
 <section class="accordion">
-  <p>Vasilis</p>
-  <article class="content">
+  <a href="#vasilis">Vasilis</a>
+  <article class="content" id="vasilis">
     <p>
       Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
     </p>
     <p><a href="https://twitter.com/vasilis">@vasilis</a></p>
   </article>
 </section>
-
-
   <script type="text/javascript">
     var menu = document.getElementsByClassName('accordion');
 
     for (var i = 0; i < menu.length; i++) {
+
+      menu[i].children[1].style.display = "none";
+
       menu[i].addEventListener("click", function() {
         this.classList.toggle("active");
-
         var content = this.children[1];
-
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
+        if (content.style.display == "none") {
           content.style.display = "block";
+        } else {
+          content.style.display = "none";
         }
       });
     }

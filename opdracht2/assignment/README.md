@@ -3,6 +3,8 @@ This is a accordion module for showing more content after a click. The accordion
 To challenge myself I kept IE9 in my mind while developing! I knew grid wouldn't work and as it was stated in the assignment it would be a module.
 On positioning i didn't use much just `display: flex;` which isn't supported on IE9.
 
+The accordion
+
 
 -	Bronnen van uitleg en gebruikte artikelen.
 ## Sources
@@ -32,13 +34,15 @@ _The support for NextSibling_
 _vw vmin vh vmax support_
 
 Transistions don't work on IE9.
+
 ![Transistions](docImages/transitions.png)
 _support CSS3 transitions_
 
-On opera mini it won't work because of the way opera works. It saves data to send "images" of de browser and it will know the coordinates of what you have clicked and show that page. Animation or transitions won't work for that matter.
 
+![Transitions are very buggy on Opera mobile](docImages/Opera-mobile.png)
+_transitions are very buggy on opera mobile_
 
-
+On opera mini it won't work because of the way opera works. It saves data to send "images" of de browser and it will know the coordinates of what you have clicked and show that page. Animation or transitions won't work (well) for that matter.
 
 
 ## Fallbacks
