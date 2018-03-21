@@ -12,6 +12,12 @@
 
     a[href*="#"] {
       text-decoration: none;
+      color: black;
+    }
+
+    a[href*="#"]:focus, a[href*="#"]:hover {
+      text-decoration: underline;
+      color: black;
     }
 
     .accordion {
@@ -38,55 +44,52 @@
     }
 
     /* Terms of service */
-         #tos { /* For dimming */
-           position: fixed;
-           top: 0;
-           right: 0;
-           bottom: 0;
-           left: 0;
-           background: rgba(0,0,0,.8);
-         }
+    body > aside {
+      display: none;
+    }
 
-         aside {
-           background-color: white;
-           margin-top: 4em;
-         }
+     aside:target {
+       position: fixed;
+       z-index: 1;
+       top: 0;
+       right: 0;
+       bottom: 0;
+       left: 0;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       background-color: rgba(0,0,0,.7);
+     }
 
-         aside > h2 {
-           display: block;
-           text-align: center;
-           margin: 1em;
-           padding: 1em;
-         }
+     aside:target > [method="post"] {
+       position: relative;
+       flex-direction: column;
+       max-width: 50%;
+       padding: 3em;
+       margin: 0;
+       background-color:rgba(255, 255, 255, 1);
+       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+     }
 
-         aside article {
-           display: block;
-           margin: 0 auto;
-           height: 20em;
-           width: 30em;
-           overflow-y: scroll;
-         }
+     aside:target form > article {
+       overflow-y: scroll;
+       max-width: 40em;
+       max-height: 16em;
+     }
 
-         aside section {
-           display: flex;
-           flex-direction: row;
-           justify-content: space-between;
-           margin: 2em;
-         }
+     aside:target form > label {
+       margin-top: 2em;
+       /* justify-content: center; */
+     }
 
-         aside section:first-of-type{
-           flex-direction: column;
-           justify-content: center;
-           align-items: center;
-         }
-         aside form {
-           display: flex;
-           justify-content: center;
-         }
+     aside:target form {
+       display: flex;
+       justify-content: center;
+     }
 
-         aside button {
-           margin: 2em;
-         }
+     aside:target button {
+       margin: 2em;
+     }
   </style>
 </head>
 <body>
@@ -116,59 +119,63 @@
     </p>
     <p><a href="https://twitter.com/vasilis">@vasilis</a></p>
   </article>
-</section>
-<a id="link" href="#TOS">Terms of Service</a>
-<div id="tos">
-  <aside>
-    <h2>Terms of Service</h2>
-    <article>
-      <h3>I. Terms</h3>
-      <p>
-        Qui dolor eaque neque quia libero blanditiis facilis. Et recusandae ut iusto ut doloremque quo enim non. Atque voluptatibus facilis itaque.          Vero fugit voluptatem atque ipsa id commodi quos aliquam. Est unde distinctio neque. Et vel nemo ducimus accusamus minus facilis est rerum. Molestiae ut sunt labore.
+  </section>
+    <a id="link" href="#tos">Terms of Service</a>
+    <aside id="tos">
+      <form action="index.html" method="post">
+      <a href="index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+        <path d="M28.5 9.62L26.38 7.5 18 15.88 9.62 7.5 7.5 9.62 15.88 18 7.5 26.38l2.12 2.12L18 20.12l8.38 8.38 2.12-2.12L20.12 18z"/>
+        <path d="M0 0h36v36H0z" fill="none"/>
+        </svg>
+      </a>
+      <h2>Terms of Service</h2>
+      <article>
+        <h3>I. Terms</h3>
+        <p>
+          Qui dolor eaque neque quia libero blanditiis facilis. Et recusandae ut iusto ut doloremque quo enim non. Atque voluptatibus facilis itaque.          Vero fugit voluptatem atque ipsa id commodi quos aliquam. Est unde distinctio neque. Et vel nemo ducimus accusamus minus facilis est rerum. Molestiae ut sunt labore.
 
-        Ea sequi consectetur nam ducimus veniam ducimus iusto velit. Eaque accusamus hic ut molestiae ducimus. Incidunt sunt et corporis voluptas quo veniam. Architecto perspiciatis vero nihil error eius esse. Voluptas non ea aut quas nihil. Totam odit voluptatum dolor.
+          Ea sequi consectetur nam ducimus veniam ducimus iusto velit. Eaque accusamus hic ut molestiae ducimus. Incidunt sunt et corporis voluptas quo veniam. Architecto perspiciatis vero nihil error eius esse. Voluptas non ea aut quas nihil. Totam odit voluptatum dolor.
 
-        A et sit non. Tempora est temporibus minus sequi. Ipsa libero voluptatem culpa totam illo omnis velit id. Et laboriosam nobis ut qui dolorum corrupti autem consectetur.
+          A et sit non. Tempora est temporibus minus sequi. Ipsa libero voluptatem culpa totam illo omnis velit id. Et laboriosam nobis ut qui dolorum corrupti autem consectetur.
 
-        Neque voluptates est neque hic minus doloribus aliquid. Officiis nostrum possimus qui est omnis eaque. Voluptas dolores nemo architecto fuga sit iste natus.
-      </p>
-      <h3>II. Of Service</h3>
-      <p>
-        Qui dolor eaque neque quia libero blanditiis facilis. Et recusandae ut iusto ut doloremque quo enim non. Atque voluptatibus facilis itaque.
+          Neque voluptates est neque hic minus doloribus aliquid. Officiis nostrum possimus qui est omnis eaque. Voluptas dolores nemo architecto fuga sit iste natus.
+        </p>
+        <h3>II. Of Service</h3>
+        <p>
+          Qui dolor eaque neque quia libero blanditiis facilis. Et recusandae ut iusto ut doloremque quo enim non. Atque voluptatibus facilis itaque.
 
-        Vero fugit voluptatem atque ipsa id commodi quos aliquam. Est unde distinctio neque. Et vel nemo ducimus accusamus minus facilis est rerum. Molestiae ut sunt labore.
+          Vero fugit voluptatem atque ipsa id commodi quos aliquam. Est unde distinctio neque. Et vel nemo ducimus accusamus minus facilis est rerum. Molestiae ut sunt labore.
 
-        Ea sequi consectetur nam ducimus veniam ducimus iusto velit. Eaque accusamus hic ut molestiae ducimus. Incidunt sunt et corporis voluptas quo veniam. Architecto perspiciatis vero nihil error eius esse. Voluptas non ea aut quas nihil. Totam odit voluptatum dolor.
+          Ea sequi consectetur nam ducimus veniam ducimus iusto velit. Eaque accusamus hic ut molestiae ducimus. Incidunt sunt et corporis voluptas quo veniam. Architecto perspiciatis vero nihil error eius esse. Voluptas non ea aut quas nihil. Totam odit voluptatum dolor.
 
-        A et sit non. Tempora est temporibus minus sequi. Ipsa libero voluptatem culpa totam illo omnis velit id. Et laboriosam nobis ut qui dolorum corrupti autem consectetur.
+          A et sit non. Tempora est temporibus minus sequi. Ipsa libero voluptatem culpa totam illo omnis velit id. Et laboriosam nobis ut qui dolorum corrupti autem consectetur.
 
-        Neque voluptates est neque hic minus doloribus aliquid. Officiis nostrum possimus qui est omnis eaque. Voluptas dolores nemo architecto fuga sit iste natus.
-      </p>
-      <h3>III. More Service Things</h3>
-      <p>
-        Qui dolor eaque neque quia libero blanditiis facilis. Et recusandae ut iusto ut doloremque quo enim non. Atque voluptatibus facilis itaque.
+          Neque voluptates est neque hic minus doloribus aliquid. Officiis nostrum possimus qui est omnis eaque. Voluptas dolores nemo architecto fuga sit iste natus.
+        </p>
+        <h3>III. More Service Things</h3>
+        <p>
+          Qui dolor eaque neque quia libero blanditiis facilis. Et recusandae ut iusto ut doloremque quo enim non. Atque voluptatibus facilis itaque.
 
-        Vero fugit voluptatem atque ipsa id commodi quos aliquam. Est unde distinctio neque. Et vel nemo ducimus accusamus minus facilis est rerum. Molestiae ut sunt labore.
+          Vero fugit voluptatem atque ipsa id commodi quos aliquam. Est unde distinctio neque. Et vel nemo ducimus accusamus minus facilis est rerum. Molestiae ut sunt labore.
 
-        Ea sequi consectetur nam ducimus veniam ducimus iusto velit. Eaque accusamus hic ut molestiae ducimus. Incidunt sunt et corporis voluptas quo veniam. Architecto perspiciatis vero nihil error eius esse. Voluptas non ea aut quas nihil. Totam odit voluptatum dolor.
+          Ea sequi consectetur nam ducimus veniam ducimus iusto velit. Eaque accusamus hic ut molestiae ducimus. Incidunt sunt et corporis voluptas quo veniam. Architecto perspiciatis vero nihil error eius esse. Voluptas non ea aut quas nihil. Totam odit voluptatum dolor.
 
-        A et sit non. Tempora est temporibus minus sequi. Ipsa libero voluptatem culpa totam illo omnis velit id. Et laboriosam nobis ut qui dolorum corrupti autem consectetur.
+          A et sit non. Tempora est temporibus minus sequi. Ipsa libero voluptatem culpa totam illo omnis velit id. Et laboriosam nobis ut qui dolorum corrupti autem consectetur.
 
-        Neque voluptates est neque hic minus doloribus aliquid. Officiis nostrum possimus qui est omnis eaque. Voluptas dolores nemo architecto fuga sit iste natus.
-      </p>
-    </article>
-    <section>
+          Neque voluptates est neque hic minus doloribus aliquid. Officiis nostrum possimus qui est omnis eaque. Voluptas dolores nemo architecto fuga sit iste natus.
+          </p>
+      </article>
       <label for="input">
         <input type="checkbox">
-        I have read the terms of service and ACCEPT them.
+          I have read the terms of service and ACCEPT them.
       </label>
-    </section>
-      <form action="index.html" method="post">
-        <a href="/"><button>No</button></a>
-        <a href="/"><button>Yes</button></a>
-      </form>
-  </aside>
-</div>
+      <div id="buttons">
+        <button type="button" name="button">No</button>
+        <button type="button" name="button">yes</button>
+      </div>
+    </form>
+    </aside>
   <script type="text/javascript">
 
   if("getElementsByClassName" in document) {
@@ -193,18 +200,6 @@
         }
       });
     }
-
-      var link = document.getElementById("link");
-      var toS = document.getElementById("tos");
-      toS.style.display = "none";
-
-      link.addEventListener("click", function(){
-        if (toS.style.display === "none") {
-          toS.style.display = "block";
-        } else {
-          toS.style.display = "none";
-        }
-      },false)
   </script>
 </body>
 </html>

@@ -29,18 +29,6 @@ _The support for NextSibling_
 ![support classList](docImages/classlist.png)
 _The support for NextSibling_
 
-![querySelectorAll support for ie8 is incomplete](docImages/querySelectorAll.png)
-_querySelectorAll support for ie8 is incomplete but technically it works for what i need it to do._
-
-```JS
-  if("getElementsByClassName" in document) {
-    // do something with getElementsByClassName.
-  } else {
-    // do something with the right fallback in this case querySelectorAll.
-  }
-```
-
-
 ### CSS
 ![vw vmin vh vmax support](docImages/vwvhvminvmax.png)
 _vw vmin vh vmax support_
@@ -72,43 +60,6 @@ Newer browsers wont */
 
 
 
-# link + overlay
 
-On the part of positioning i used `display: flex;`.
-
-
--	Bronnen van uitleg en gebruikte artikelen.
-## Sources
-* [quirksmode table of contents about all selectors](https://quirksmode.org/dom/core/#fivemethods)
-* [Impressive web CSS3 support in IE9](https://www.impressivewebs.com/css3-support-ie9/)
-
--	Welke browsers/devices ondersteunen deze wel/niet.
-
-## Browser support
-
-### Javascript
-
-![Support for getElementById](docImages/getElementById.png)
-_The support for getElementById_
-
-![Support for style](docImages/classlist.png)
-_The support for NextSibling_
-
-### CSS
-![Support for flexbox](docImages/displayflex.png)
-_The support for flexbox_
-
-
-
-## fallback
-
-* Flexbox fallback
-```CSS
-element {
-/* for older browsers IE9 and down the line */
-  display: table;
-/* older browser will not understand flex and ignore it.
-Newer browsers wont */
-  display: flex;
-}
-```
+* [Link to accordion](https://vincentkempers.github.io/browser-technologies/opdracht2/accordion/)
+* [Link to terms of service](https://vincentkempers.github.io/browser-technologies/opdracht2/terms-of-service/)
