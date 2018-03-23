@@ -3,16 +3,12 @@ This is a accordion module for showing more content after a click. The accordion
 To challenge myself I kept IE9 in my mind while developing! I knew grid wouldn't work and as it was stated in the assignment it would be a module.
 On positioning i didn't use much just `display: flex;` which isn't supported on IE9.
 
-The accordion
+Link for the project: 
 
-
--	Bronnen van uitleg en gebruikte artikelen.
 ## Sources
 * [quirksmode table of contents about all selectors](https://quirksmode.org/dom/core/#fivemethods)
 * [Impressive web CSS3 support in IE9](https://www.impressivewebs.com/css3-support-ie9/)
 * [can i use](https://caniuse.com/)
-
--	Welke browsers/devices ondersteunen deze wel/niet.
 
 ## Browser support
 
@@ -31,14 +27,6 @@ _The support for NextSibling_
 
 ![querySelectorAll support for ie8 is incomplete](docImages/querySelectorAll.png)
 _querySelectorAll support for ie8 is incomplete but technically it works for what i need it to do._
-
-```JS
-  if("getElementsByClassName" in document) {
-    // do something with getElementsByClassName.
-  } else {
-    // do something with the right fallback in this case querySelectorAll.
-  }
-```
 
 
 ### CSS
