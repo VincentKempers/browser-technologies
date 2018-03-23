@@ -15,3 +15,5 @@ criteria
   -	Bronnen van uitleg en gebruikte artikelen.
   -	Welke browsers/devices ondersteunen deze wel/niet.
   -	Een beschrijving hoe de fallback werkt.
+
+[link]([Link for the project](https://vincentkempers.github.io/browser-technologies/opdracht2/)
