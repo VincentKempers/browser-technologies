@@ -76,7 +76,7 @@ Newer browsers wont */
 * Creating a fallback for JavaScript
 
 ```JS
-if("getElementsByClassName" in document) {
+if(document.getElementsByClassName) {
   // Run the code with get getElementsByClassName
   console.dir(document);
 } else {

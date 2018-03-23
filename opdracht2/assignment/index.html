@@ -178,12 +178,7 @@
     </aside>
   <script type="text/javascript">
 
-  if("getElementsByClassName" in document) {
-    console.dir(document);
-} else {
-  console.log("not around");
-}
-
+  if(document.getElementsByClassName) {
     var menu = document.getElementsByClassName('accordion');
 
     for (var i = 0; i < menu.length; i++) {
@@ -200,6 +195,26 @@
         }
       });
     }
+  } else {
+    var menu = document.getElementsByTagName('section');
+
+    for (var i = 0; i < menu.length; i++) {
+
+      menu[i].children[1].style.display = "none";
+
+      menu[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.children[1];
+        if (content.style.display == "none") {
+          content.style.display = "block";
+        } else {
+          content.style.display = "none";
+        }
+      });
+    }
+  };
+
+
   </script>
 </body>
 </html>
