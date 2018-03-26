@@ -41,21 +41,15 @@
 </form>
 
 <script type="text/javascript">
+    var connection = new WebSocket('ws://localhost:3000');
 
-
-  var connection = new WebSocket('ws://localhost:8787');
-
-
-    connection.onopen = function () {
-      connection.send('Hello, Server!!'); //send a message to server once connection is opened.
+    connection.onopen = function() {
+        console.log('websocket is connected ...');
+        ws.send('connected');
     };
-    connection.onerror = function (error) {
-      console.log('Error Logged: ' + error); //log errors
+    connection.onmessage = function(ev) {
+        console.log(ev);
     };
-    connection.onmessage = function (e) {
-      console.log('Received From Server: ' + e.data); //log the received message
-    };
-
 </script>
 
 </body>
