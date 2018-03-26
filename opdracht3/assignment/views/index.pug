@@ -4,6 +4,6 @@ block content
   ul#myUL
     each key in data
       li
-        a(href="/poster/" + key.title)
+        a(href=key.name)
           h3= key.name
           span= key.region
