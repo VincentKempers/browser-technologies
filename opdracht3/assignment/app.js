@@ -6,7 +6,7 @@ app.set('view engine', 'pug');
 
 var allUsers = [];
 
-for (var i = 0; i < 3; i++) {
+for (var i = 0; i < 15; i++) {
   var fakeUser = {
     card: faker.helpers.createCard()
   };
