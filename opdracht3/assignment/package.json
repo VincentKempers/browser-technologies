@@ -5,15 +5,15 @@
   "main": "app.js",
   "dependencies": {
     "express": "^4.16.3",
-    "nodemon": "^1.17.2",
-    "pug": "^2.0.3",
-    "request": "^2.85.0"
+    "faker": "^4.1.0",
+    "nodemon": "^1.17.4",
+    "pug": "^2.0.3"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
   },
-  "author": "",
+  "author": "Vincent Kempers",
   "license": "ISC"
 }
