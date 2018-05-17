@@ -33,33 +33,4 @@ app.get('/:id', function(req, res) {
 });
 
 
-// request('https://jsonplaceholder.typicode.com/users', function (error, response, body) {
-//   var data = JSON.parse(body);
-//   var contacts = data.map(function(d){
-//     console.log(d);
-//     return {
-//       name: d.name + ' ' + d.surname,
-//       region: d.region
-//     }
-//   })
-//   console.log(contacts);
-//
-// });
-
-// app.use('/:id', function(req, res){
-//   request('https://uinames.com/api/?ext', function (error, response, body) {
-//     var data = JSON.parse(body);
-//     var contact = data.map(function(d){
-//       return {
-//         name: d.title + ' ' + d.name + ' ' + d.surname,
-//         region: d.region,
-//         birthday: d.birthday.dmy,
-//         email: d.email,
-//         image: d.photo
-//       }
-//     })
-//     res.render('detail', {data: contact});
-//   });
-// });
-
 app.listen(8600);
