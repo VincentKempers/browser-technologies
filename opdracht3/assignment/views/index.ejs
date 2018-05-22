@@ -1,5 +1,5 @@
 <%- include('header'); -%>
-<section>
+<section class="names">
   <ul>
     <li><a href="#A">A</a></li>
     <li><a href="#B">B</a></li>
@@ -29,19 +29,43 @@
     <li><a href="#Z">Z</a></li>
   </ul>
 </section>
-<section>
-  <input type="search" name="search" value="search">
+<section class="all-users">
+
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<ul id="myUL">
+  <% fakePerson.forEach(function(user){ %>
+   <li>
+     <a href=<%= user.username%>>
+       <%= user.name %>
+     </a>
+   </li>
+ <% }); %>
+</ul>
+
   <ul>
-    <% fakePerson.forEach(function(user){ %>
-     <li>
-       <a href=<%= user.name%>>
-         <%= user.name %>
-       </a>
-     </li>
-   <% }); %>
+
   </ul>
 </section>
 
+<script type="text/javascript">
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+      } else {
+          li[i].style.display = "none";
+
+      }
+  }
+}
+</script>
 
 
 <%- include('footer'); -%>
