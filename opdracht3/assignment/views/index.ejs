@@ -1,5 +1,5 @@
 <%- include('header'); -%>
-<section class="names">
+<section class="letters">
   <ul>
     <li><a href="#A">A</a></li>
     <li><a href="#B">B</a></li>
@@ -30,14 +30,12 @@
   </ul>
 </section>
 <section class="all-users">
-
   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-
   <ul id="myUL">
     <% fakePerson.forEach(function(user){ %>
      <li>
-       <a href=<%= user.username%>>
-         <%= user.name %>
+       <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+         <%= user.fullName %>
        </a>
      </li>
    <% }); %>
