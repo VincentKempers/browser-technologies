@@ -33,18 +33,14 @@
 
   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 
-<ul id="myUL">
-  <% fakePerson.forEach(function(user){ %>
-   <li>
-     <a href=<%= user.username%>>
-       <%= user.name %>
-     </a>
-   </li>
- <% }); %>
-</ul>
-
-  <ul>
-
+  <ul id="myUL">
+    <% fakePerson.forEach(function(user){ %>
+     <li>
+       <a href=<%= user.username%>>
+         <%= user.name %>
+       </a>
+     </li>
+   <% }); %>
   </ul>
 </section>
 
