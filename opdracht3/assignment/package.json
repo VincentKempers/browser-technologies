@@ -4,10 +4,10 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
+    "ejs": "^2.6.1",
     "express": "^4.16.3",
     "faker": "^4.1.0",
-    "nodemon": "^1.17.4",
-    "pug": "^2.0.3"
+    "nodemon": "^1.17.4"
   },
   "devDependencies": {},
   "scripts": {
