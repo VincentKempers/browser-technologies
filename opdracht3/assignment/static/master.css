@@ -46,7 +46,7 @@ ul {
 
 #myUL li a {
   border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
+  margin-top: -1px;
   background-color: #f6f6f6;
   padding: 12px;
   text-decoration: none;
@@ -57,4 +57,17 @@ ul {
 
 #myUL li a:hover:not(.header) {
   background-color: #eee;
+}
+
+.letters {
+  margin-right: 2em;
+}
+
+.letters ul > li {
+  margin-bottom: .5em;
+}
+
+.letters ul li > a {
+  text-decoration: none;
+  padding: .5em;
 }
