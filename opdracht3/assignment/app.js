@@ -35,18 +35,11 @@ app.use('/contacts', function(req, res){
 
 app.get('/:id', function(req, res) {
   var rightUser = [];
-  console.log(req.params.id);
-  console.log(allUsers)
-
   for (var i = 0; i < allUsers.length; i++) {
     if (allUsers[i].username == req.params.id) {
-      console.log(allUsers[i].name);
       rightUser.push(allUsers[i]);
-    } else {
-      console.log('no')
     }
   }
-  console.log(rightUser);
   res.render('detail', {fakePerson: rightUser});
 });
 
