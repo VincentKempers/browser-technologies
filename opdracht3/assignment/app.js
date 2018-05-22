@@ -35,14 +35,18 @@ app.use('/contacts', function(req, res){
 
 app.get('/:id', function(req, res) {
   var rightUser = [];
-  allUsers.forEach(function (d) {
-    // console.log(d.name);
-    if (req.params.id == d.name) {
-      console.log(d.name);
+  console.log(req.params.id);
+  console.log(allUsers)
+
+  for (var i = 0; i < allUsers.length; i++) {
+    if (allUsers[i].username == req.params.id) {
+      console.log(allUsers[i].name);
+      rightUser.push(allUsers[i]);
     } else {
-      console.log('vincent');
+      console.log('no')
     }
-  });
+  }
+  console.log(rightUser);
   res.render('detail', {fakePerson: rightUser});
 });
 
