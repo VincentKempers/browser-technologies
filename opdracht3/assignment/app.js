@@ -8,21 +8,29 @@ app.use('/static', express.static('static'));
 
 // storing all the users in an array
 var allUsers = [];
-
+var newAllUsers = [];
 // function to sort the data.
 function compare(a,b) {
-  if (a.name < b.name)
+  if (a.fullName < b.fullName)
     return -1;
-  if (a.name > b.name)
+  if (a.fullName > b.fullName)
     return 1;
   return 0;
 }
 // looping over all data to push in fake user!
-for (var i = 0; i < 15; i++) {
+for (var i = 0; i < 25; i++) {
   var fakeUser = faker.helpers.createCard();
-  // push all data to allUsers
+  // push all data to allUser
   allUsers.push(fakeUser);
-  allUsers.sort(compare);
+  newAllUsers = allUsers.map(function(d){
+    return {
+      firstLetter: d.name.charAt(0),
+      fullName: d.name,
+      nickName: d.username
+    }
+  })
+  newAllUsers.sort(compare);
+  console.log(newAllUsers)
 };
 
 app.get('/', function(req,res){
@@ -30,7 +38,7 @@ app.get('/', function(req,res){
 })
 
 app.use('/contacts', function(req, res){
-  res.render('index', {fakePerson: allUsers});
+  res.render('index', {fakePerson: newAllUsers});
 });
 
 app.get('/:id', function(req, res) {
