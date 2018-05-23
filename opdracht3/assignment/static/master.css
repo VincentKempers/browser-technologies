@@ -85,9 +85,7 @@ ul {
   background-color: #eee;
 }
 
-
 /* detail page */
-
 .detail--header {
   background: #4b6cb7; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #4b6cb7, #182848); /* webkit support*/
@@ -136,7 +134,7 @@ details > p {
 
 p {
   font-weight: normal;
-  background: #FFF59D;
+  background: lightgray;
   padding: .8em;
 }
 
