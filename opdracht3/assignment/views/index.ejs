@@ -1,5 +1,9 @@
 <%- include('header'); -%>
-<section class="letters">
+<div class="home--header">
+  <h1>Contactlist</h1>
+</div>
+<main class="home">
+<div class="letters">
   <ul>
     <li><a href="#A">A</a></li>
     <li><a href="#B">B</a></li>
@@ -28,19 +32,274 @@
     <li><a href="#Y">Y</a></li>
     <li><a href="#Z">Z</a></li>
   </ul>
-</section>
-<section class="all-users">
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-  <ul id="myUL">
-    <% fakePerson.forEach(function(user){ %>
-     <li>
-       <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
-         <%= user.fullName %>
-       </a>
-     </li>
+</div>
+<div class="all-users">
+  <label for="input">
+    Search for names
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+  </label>
+      <dl id="myUL">
+        <dt id="a">A</dt>
+      <% fakePerson.forEach(function(user){ %>
+      <% if(user.firstLetter == 'A') { %>
+      <dd>
+        <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+          <%= user.fullName %>
+        </a>
+      </dd>
+      <% } %>
+      <% }); %>
+      <dt id="B">B</dt>
+      <% fakePerson.forEach(function(user){ %>
+      <% if(user.firstLetter == 'B') { %>
+      <dd>
+        <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+          <%= user.fullName %>
+        </a>
+      </dd>
+      <% } %>
    <% }); %>
-  </ul>
-</section>
-
+   <dt id="C">C</dt>
+   <% fakePerson.forEach(function(user){ %>
+   <% if(user.firstLetter == 'C') { %>
+   <dd>
+     <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+       <%= user.fullName %>
+     </a>
+   </dd>
+   <% } %>
+<% }); %>
+   <dt id="D">D</dt>
+   <% fakePerson.forEach(function(user){ %>
+   <% if(user.firstLetter == 'D') { %>
+   <dd>
+     <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+       <%= user.fullName %>
+     </a>
+   </dd>
+   <% } %>
+<% }); %>
+   <dt id="E">E</dt>
+   <% fakePerson.forEach(function(user){ %>
+   <% if(user.firstLetter == 'E') { %>
+   <dd>
+     <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+       <%= user.fullName %>
+     </a>
+   </dd>
+   <% } %>
+<% }); %>
+   <dt id="F">F</dt>
+   <% fakePerson.forEach(function(user){ %>
+   <% if(user.firstLetter == 'F') { %>
+   <dd>
+     <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+       <%= user.fullName %>
+     </a>
+   </dd>
+   <% } %>
+<% }); %>
+   <dt id="G">G</dt>
+   <% fakePerson.forEach(function(user){ %>
+   <% if(user.firstLetter == 'G') { %>
+   <dd>
+     <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+       <%= user.fullName %>
+     </a>
+   </dd>
+   <% } %>
+<% }); %>
+   <dt id="H">H</dt>
+   <% fakePerson.forEach(function(user){ %>
+   <% if(user.firstLetter == 'H') { %>
+   <dd>
+     <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+       <%= user.fullName %>
+     </a>
+   </dd>
+   <% } %>
+<% }); %>
+   <dt id="I">I</dt>
+   <% fakePerson.forEach(function(user){ %>
+   <% if(user.firstLetter == 'I') { %>
+   <dd>
+     <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+       <%= user.fullName %>
+     </a>
+   </dd>
+   <% } %>
+<% }); %>
+   <dt id="J">J</dt>
+   <% fakePerson.forEach(function(user){ %>
+   <% if(user.firstLetter == 'J') { %>
+   <dd>
+     <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+       <%= user.fullName %>
+     </a>
+   </dd>
+   <% } %>
+<% }); %>
+   <dt id="K">K</dt>
+   <% fakePerson.forEach(function(user){ %>
+   <% if(user.firstLetter == 'K') { %>
+   <dd>
+     <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+       <%= user.fullName %>
+     </a>
+   </dd>
+   <% } %>
+<% }); %>
+   <dt id="L">L</dt>
+   <% fakePerson.forEach(function(user){ %>
+   <% if(user.firstLetter == 'L') { %>
+   <dd>
+     <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+       <%= user.fullName %>
+     </a>
+   </dd>
+   <% } %>
+<% }); %>
+   <dt id="M">M</dt>
+   <% fakePerson.forEach(function(user){ %>
+   <% if(user.firstLetter == 'M') { %>
+   <dd>
+     <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+       <%= user.fullName %>
+     </a>
+   </dd>
+   <% } %>
+<% }); %>
+   <dt id="N">N</dt>
+   <% fakePerson.forEach(function(user){ %>
+   <% if(user.firstLetter == 'N') { %>
+   <dd>
+     <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+       <%= user.fullName %>
+     </a>
+   </dd>
+   <% } %>
+<% }); %>
+   <dt id="O">O</dt>
+   <% fakePerson.forEach(function(user){ %>
+   <% if(user.firstLetter == 'O') { %>
+   <dd>
+     <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+       <%= user.fullName %>
+     </a>
+   </dd>
+   <% } %>
+<% }); %>
+   <dt id="P">P</dt>
+   <% fakePerson.forEach(function(user){ %>
+   <% if(user.firstLetter == 'P') { %>
+   <dd>
+     <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+       <%= user.fullName %>
+     </a>
+   </dd>
+   <% } %>
+<% }); %>
+   <dt id="Q">Q</dt>
+   <% fakePerson.forEach(function(user){ %>
+   <% if(user.firstLetter == 'Q') { %>
+   <dd>
+     <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+       <%= user.fullName %>
+     </a>
+   </dd>
+   <% } %>
+<% }); %>
+   <dt id="R">R</dt>
+   <% fakePerson.forEach(function(user){ %>
+   <% if(user.firstLetter == 'R') { %>
+   <dd>
+     <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+       <%= user.fullName %>
+     </a>
+   </dd>
+   <% } %>
+<% }); %>
+   <dt id="S">S</dt>
+   <% fakePerson.forEach(function(user){ %>
+   <% if(user.firstLetter == 'S') { %>
+   <dd>
+     <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+       <%= user.fullName %>
+     </a>
+   </dd>
+   <% } %>
+<% }); %>
+   <dt id="T">T</dt>
+   <% fakePerson.forEach(function(user){ %>
+   <% if(user.firstLetter == 'T') { %>
+   <dd>
+     <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+       <%= user.fullName %>
+     </a>
+   </dd>
+   <% } %>
+<% }); %>
+   <dt id="U">U</dt>
+   <% fakePerson.forEach(function(user){ %>
+   <% if(user.firstLetter == 'U') { %>
+   <dd>
+     <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+       <%= user.fullName %>
+     </a>
+   </dd>
+   <% } %>
+<% }); %>
+   <dt id="V">V</dt>
+   <% fakePerson.forEach(function(user){ %>
+   <% if(user.firstLetter == 'V') { %>
+   <dd>
+     <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+       <%= user.fullName %>
+     </a>
+   </dd>
+   <% } %>
+<% }); %>
+   <dt id="W">W</dt>
+   <% fakePerson.forEach(function(user){ %>
+   <% if(user.firstLetter == 'W') { %>
+   <dd>
+     <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+       <%= user.fullName %>
+     </a>
+   </dd>
+   <% } %>
+<% }); %>
+   <dt id="X">X</dt>
+   <% fakePerson.forEach(function(user){ %>
+   <% if(user.firstLetter == 'X') { %>
+   <dd>
+     <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+       <%= user.fullName %>
+     </a>
+   </dd>
+   <% } %>
+<% }); %>
+   <dt id="Y">Y</dt>
+   <% fakePerson.forEach(function(user){ %>
+   <% if(user.firstLetter == 'Y') { %>
+   <dd>
+     <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+       <%= user.fullName %>
+     </a>
+   </dd>
+   <% } %>
+<% }); %>
+   <dt id="Z">Z</dt>
+   <% fakePerson.forEach(function(user){ %>
+   <% if(user.firstLetter == 'Z') { %>
+   <dd>
+     <a id="<%= user.firstLetter %>" href= <%= user.nickName %>>
+       <%= user.fullName %>
+     </a>
+   </dd>
+   <% } %>
+<% }); %>
+</div>
+</main>
 
 <%- include('footer'); -%>
