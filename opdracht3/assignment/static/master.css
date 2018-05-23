@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'openSans-bold';
+  src: url('fonts/OpenSans-Bold.eot'); /* IE9 Compat Modes */
+  src: url('fonts/OpenSans-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'openSans-reg';
+  src: url('fonts/OpenSans-Regular.eot'); /* IE9 Compat Modes */
+  src: url('fonts/OpenSans-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'openSans-ita';
+  src: url('fonts/OpenSans-Italic.eot'); /* IE9 Compat Modes */
+  src: url('fonts/OpenSans-Italic.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
 @supports (scroll-behavior: smooth) {
   * {
     scroll-behavior: smooth;
@@ -6,6 +24,7 @@
 
 body {
   box-sizing: border-box;
+  font-family: openSans-reg;
   margin: 0;
   padding: 0;
 }
@@ -85,7 +104,6 @@ ul {
 
 #myUL li a {
   border: 1px solid #ddd;
-  margin-top: -1px;
   background-color: #f6f6f6;
   padding: 1em;
   text-decoration: none;
@@ -135,28 +153,40 @@ ul {
   margin: 1em;
 }
 
-.detail--page main > details{
-  background-color: red;
-}
-
 .detail--page main details > summary {
   padding: .2em;
   border-bottom: 1px solid lightgray;
 }
 
-details > p {
+details[open] summary ~ * {
+  animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep {
+  0%    {opacity: 0; margin-left: -10px}
+  100%  {opacity: 1; margin-left: 0px}
+}
+
+main > details {
+  margin-left: .3em;
+}
+
+main details > summary {
+  font-weight: bold;
+}
+
+main details > p {
   margin:0;
   padding: 1em 0em 1em 2em;
 }
 
 p {
-  font-weight: normal;
   background: lightgray;
   padding: .8em;
 }
 
 a {
-  color: #07c;
+  color: #4b6cb7;
 }
 
 dl {
@@ -166,12 +196,10 @@ dl {
 }
 
 dt {
-  background: #B8C1C8;
-  border-bottom: 1px solid #989EA4;
-  border-top: 1px solid #717D85;
+  background: #3779d9;
   color: #FFF;
   margin: 0;
-  padding: 2px 0 0 12px;
+  padding: .3em 0 .3em 12px;
   position: -webkit-sticky;
   position: sticky;
   top: -1px;
@@ -184,5 +212,4 @@ dd {
   font-weight: bold;
   margin: 0;
   padding: 0 0 0 12px;
-  white-space: nowrap;
 }
