@@ -18,11 +18,12 @@ function compare(a,b) {
   return 0;
 }
 // looping over all data to push in fake user!
-for (var i = 0; i < 25; i++) {
+for (var i = 0; i < 2; i++) {
   var fakeUser = faker.helpers.createCard();
   // push all data to allUser
   allUsers.push(fakeUser);
   newAllUsers = allUsers.map(function(d){
+    console.log(d)
     return {
       firstLetter: d.name.charAt(0),
       fullName: d.name,
@@ -30,7 +31,6 @@ for (var i = 0; i < 25; i++) {
     }
   })
   newAllUsers.sort(compare);
-  console.log(newAllUsers)
 };
 
 app.get('/', function(req,res){
