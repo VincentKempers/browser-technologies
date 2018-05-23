@@ -1,29 +1,14 @@
+@supports (scroll-behavior: smooth) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
 
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
-body > .home {
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-}
-
-@supports not (display: grid) {
-  body {
-    float: right;
-  }
-}
-
-@supports (display: grid) {
-  body {
-    display: grid;
-  }
-}
-
-
 
 .home--header {
   background: #4b6cb7; /* fallback for old browsers */
@@ -35,6 +20,19 @@ body > .home {
   width: 100vw;
   text-align: center;
   color: white;
+}
+
+@supports not (display: grid) {
+  .home {
+    float: left;
+  }
+}
+
+@supports (display: grid) {
+  .home {
+    display: grid;
+    grid-template-columns: 15% 65% 20%;
+  }
 }
 
 .all-users {
@@ -180,12 +178,11 @@ dt {
 }
 
 dd {
-  font: bold 20px/45px Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  line-height: 45px;
+  font-weight: bold;
   margin: 0;
   padding: 0 0 0 12px;
   white-space: nowrap;
-}
-
-dd + dd {
-  border-top: 1px solid #CCC
 }
