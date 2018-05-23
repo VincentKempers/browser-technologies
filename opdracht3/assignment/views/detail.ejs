@@ -1,17 +1,32 @@
 <%- include('header'); -%>
 
-<section>
+<section class="detail--page">
   <% fakePerson.forEach(function(user){ %>
-   <h1><%= user.name %></h1>
-   <ul>
-     <li><p>Mail: <a href= mailto:<%= user.email %> ><%= user.email %></a></p></li>
-     <li><p><%= user.phone %></p></li>
-     <li><a href= <%= user.website %> ><%= user.website %></a></li>
-     <li><%= user.address.streetC %></li>
-     <li><%= user.address.zipcode %></li>
-     <li><%= user.address.country %></li>
+  <div class="detail--header">
+    <img src="static/imgs/random-user_imageM4.jpg" alt="a photo of <%= user.name %>">
+    <h1><%= user.name %></h1>
+  </div>
+  <main>
+    <details open>
+      <summary role="button">Cellphone</summary>
+      <p><%= user.phone %></p>
+    </details>
+    <details open>
+      <summary role="button">Mail</summary>
+      <p><a href= mailto:<%= user.email %> ><%= user.email %></a></p>
+    </details>
+    <details open>
+      <summary role="button">Website</summary>
+      <p><a href= <%= user.website %> ><%= user.website %></a></p>
+    </details>
+    <details open>
+      <summary role="button">Street</summary>
+      <p><%= user.address.streetC %></p>
+      <p><%= user.address.zipcode %></p>
+      <p><%= user.address.country %></p>
+    </details>
+  </main>
  <% }); %>
- </ul>
 </section>
 
 <%- include('footer'); -%>
