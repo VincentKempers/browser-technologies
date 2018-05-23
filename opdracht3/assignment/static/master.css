@@ -3,28 +3,14 @@ body {
   flex-direction: row;
 }
 
-
 ul {
   list-style: none;
 }
 
-/* .names ul > li {
-  padding: 1em;
-  margin-bottom: 1em;
-}
-
-.names ul li > a {
-  text-decoration: none;
-}
-
-.all-users ul > li {
-  background-color: cyan;
-  padding: 1em;
-  margin-bottom: 1em;
-} */
-
-* {
+body {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 #myInput {
@@ -70,4 +56,55 @@ ul {
 .letters ul li > a {
   text-decoration: none;
   padding: .5em;
+}
+
+/* detail page */
+
+.detail--page {
+  width: 100%;
+  width: 100vw;
+}
+
+.detail--header {
+  background: #4b6cb7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4b6cb7, #182848); /* webkit support*/
+  background: linear-gradient(to right, #4b6cb7, #182848);
+  width: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail--header > img {
+  margin-top: 32px;
+  margin-top: 2em;
+  width: 8em;
+  border-radius: 5em;
+}
+
+.detail--header > h1 {
+  filter: none;
+  color: white;
+}
+
+
+.detail--page > main {
+  margin: 16px;
+  margin: 1em;
+}
+
+.detail--page main > details {
+
+}
+
+.detail--page main details > summary {
+  padding: .2em;
+  border-bottom: 1px solid lightgray;
+}
+
+details > p {
+  margin:0;
+  padding: 1em 0em 1em 2em;
 }
