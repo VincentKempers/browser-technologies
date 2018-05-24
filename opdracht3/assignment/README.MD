@@ -55,6 +55,14 @@ _support CSS3 transitions_
 * flexbox
 
 ```CSS
+
+@supports (scroll-behavior: smooth) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+
 element {
 /* for older browsers IE9 and down the line */
   display: block;
@@ -66,18 +74,30 @@ Newer browsers wont */
 }
 ```
 
-* Creating a fallback for JavaScript
+* My fallback for add `.attachEvent`
 
 ```JS
-if(document.getElementsByClassName) {
-  // Run the code with get getElementsByClassName
-  console.dir(document);
-} else {
-  // run the code with a different selector
-  console.log("Not supported");
+if (document.getElementById && document.getElementsByTagName && document.attachEvent) {
+  var input = document.getElementById("myInput");
+  input.attachEvent('onkeyup', myFunction);
+
+  function myFunction() {
+    var input = document.getElementById("myInput");
+    var filter = input.value.toUpperCase();
+    var ul = document.getElementById("myUL");
+    var dd = ul.getElementsByTagName("dd");
+    for (var i = 0; i < dd.length; i++) {
+      var a = dd[i].getElementsByTagName("a")[0];
+      if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        dd[i].style.display = "";
+      } else {
+        dd[i].style.display = "none";
+      }
+    }
+  }
 }
 ```
-
+_Note: the application actually better this way i noticed bugs when I did it diffrently but this actually supports ie8 perfectly_
 
 ## Browser support
 Because of the low Javascript usage are there only some CSS fallbacks needed to be created.
@@ -95,6 +115,7 @@ Ways of testing:
 ![internet explorer 8](docAssets/ie8.jpg)
 _ie 8_
 
+
 ![internet explorer 9](docAssets/ie9.jpg)
 _ie 9_
 
@@ -109,10 +130,18 @@ _IE 11_
 _Microsoft Edge_
 
 #### Notes
+- On IE8 I really didn't want to do that much crazy things but for what it's worth, it WORKS :tada:.
+- On IE9 it's a bit of the same experience on ie8 but it actually works a bit smoother. Details still don't work properly but if you go on a details page you actually want to see everything.
+- On IE10 Animations start to work now! You can see the progression on the page. Filter works properly and you view everything.
+- On IE11 it's the same experience mostly but you get a hint of the middle browser experience. You can click and it will open the quick view version.
+- On Microsoft Edge I found no problems and it works just as great!
+
 
 ### Firefox
-![Firefox windows](docAssets/firefox-windows.jpg)
+![Firefox windows 7 v16 ](docAssets/firefox-windows-16.jpg)
+_Firefox_
 
+![Firefox windows 7 latest ](docAssets/firefox-windows-latest.jpg)
 _Firefox_
 
 ##### Notes
@@ -124,6 +153,17 @@ _Firefox_
 #### Notes
 * There were no bugs found. with or without JS & CSS.
 * tabbing was a bit weird in safari. I couldn't reach the website with tabbing.
+
+### Chrome
+![chrome windows 7 v22 ](docAssets/chrome-windows-latest.jpg)
+_Firefox_
+
+![Chrome windows 7 latest ](docAssets/chrome-windows-latest.jpg)
+_Firefox_
+
+#### Notes
+- on v22 it works pretty good! Really solid! even the on clicks
+- latest the chrome shows here Sticky and scroll works smoothly
 
 ### Opera mobile
 ![Opera Mobile](docAssets/Opera-mobile.png)
