@@ -22,6 +22,10 @@
   }
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 body {
   box-sizing: border-box;
   font-family: openSans-reg;
@@ -212,4 +216,16 @@ dd {
   font-weight: bold;
   margin: 0;
   padding: 0 0 0 12px;
+}
+
+footer {
+  margin-top: 2em;
+}
+
+footer > a {
+  margin: 2em 0 0 1.4em;
+  padding: .7em;
+  background-color: #3f5a9a;
+  color: white;
+  text-decoration: none;
 }
