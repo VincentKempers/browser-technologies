@@ -276,6 +276,7 @@
      <a href= <%= user.nickName %>>
        <%= user.fullName %>
      </a>
+
    </dd>
    <% } %>
 <% }); %>
@@ -300,8 +301,9 @@
    <% } %>
 <% }); %>
 </div>
+<div class="hidden" id="content">
+</div>
 </main>
-<div class="hidden" id="content"></div>
-<script src="/static/filter.js"></script>
 <script src="/static/container.js"></script>
+<script src="/static/filter.js"></script>
 <%- include('footer'); -%>
