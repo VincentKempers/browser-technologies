@@ -23,8 +23,11 @@
 }
 
 .hidden {
-  visibility: hidden;
-  opacity: 0;
+  visibility: collapse;
+}
+
+.animationleftToRight {
+  animation: leftToRight .5s ease-in;
 }
 
 #content {
@@ -32,12 +35,22 @@
   padding: 1em;
   position: fixed;
   right: 0;
-  opacity: 1;
+  transition: right 1s ease-in;
   display: flex;
   flex-direction: column;
   border: 1px solid grey;
   box-shadow: 2px lightgray;
-  animation: sweep 2s ease-in;
+}
+
+@keyframes leftToRight {
+  0%    {
+    opacity: 0;
+    margin-right: -20px;
+  }
+  100%  {
+    opacity: 1;
+    margin-right: 0px;
+  }
 }
 
 #content > img {
@@ -191,6 +204,7 @@ details[open] summary ~ * {
   0%    {opacity: 0; margin-left: -10px}
   100%  {opacity: 1; margin-left: 0px}
 }
+
 
 main > details {
   margin-left: .3em;
