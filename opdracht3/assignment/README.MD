@@ -184,10 +184,11 @@ _Edge Windows_
 ### Firefox
 <details>
 <summary> Firefox v16 & latest </summary>
-![Firefox windows 7 v16 ](docAssets/firefox-windows-16.png)
+<img src="docAssets/firefox-windows-16.png">
 _Firefox v16_
 
-![Firefox windows 7 latest ](docAssets/firefox-windows-latest.png)
+
+<img src="docAssets/firefox-windows-latest.png">
 _Firefox latest_
 
 </details>
