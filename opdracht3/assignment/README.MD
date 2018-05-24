@@ -41,9 +41,8 @@ _Note: I probabl/maybe should have experimented more! Due to time constraints I 
   * The production `npm start`.
 
 
-
-
 # Progressive enhanced
+
 | Core functionality | enhancements | Latest |
 | :------------- | :------------- |
 | You can view a list with contacts | You can filter through the list | Smooth scrolling |
@@ -52,6 +51,7 @@ _Note: I probabl/maybe should have experimented more! Due to time constraints I 
 | You can view a contact information in detail | on click view for contact list | Sticky position |
 
 # Redo
+
 | First try | Second try     |
 | :------------- | :------------- |
 | "" | Figure out how the `@supports` work |
