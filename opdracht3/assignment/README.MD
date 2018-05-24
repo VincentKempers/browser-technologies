@@ -161,14 +161,14 @@ _ie 9_
 ![internet explorer 10](docAssets/ie10.png)
 _ie 10_
 
-![internet explorer 11](docAssets/terms-ie11.png)
+![internet explorer 11](docAssets/ie11.png)
 _IE 11_
 </details>
 
 ### Microsoft Edge
 <details>
 <summary> microsoft edge </summary>
-<img src="docAssets/edge-windows.jpg">
+<img src="docAssets/edge-windows.png">
 _Edge Windows_
 </details>
 
@@ -184,11 +184,12 @@ _Edge Windows_
 ### Firefox
 <details>
 <summary> Firefox v16 & latest </summary>
-![Firefox windows 7 v16 ](docAssets/firefox-windows-16.jpg)
+![Firefox windows 7 v16 ](docAssets/firefox-windows-16.png)
 _Firefox v16_
 
-![Firefox windows 7 latest ](docAssets/firefox-windows-latest.jpg)
+![Firefox windows 7 latest ](docAssets/firefox-windows-latest.png)
 _Firefox latest_
+
 </details>
 
 ##### Notes
@@ -198,6 +199,7 @@ _Firefox latest_
 <details>
 <summary> Safari </summary>
 ![Safari](docAssets/safari-1.png)
+![Safari](docAssets/safari-2.png)
 _Safari_
 </details>
 
@@ -223,8 +225,10 @@ _Chrome latest_
 ### UC Browser
 
 <details>
-<summary> microsoft edge </summary>
-![UC Browser on a device from 2013](docAssets/uc-browser-png)
+<summary> UC browser </summary>
+![UC Browser on a device from 2013](docAssets/uc-browser-pad.png)
+![UC Browser on a device from 2013](docAssets/uc-browser-click.png)
+
 _Android UC browser_
 </details>
 
@@ -232,9 +236,7 @@ _Android UC browser_
 * It works!
 * The emulation ran a bit slow so i couldn't really tell if there were animations. The browser doesn't really support animations but it works solid.
 
-
 ## Mobile browsers/ Device Lab
-
 
 ### Samsung phone
 <details>
@@ -293,10 +295,8 @@ I tried to keep focus on colours. I used different blues and made use of a lot o
 Some colour examples:
 <details>
 <summary>Colour analyser</summary>
-  <img src="">
-  <img src="">
-  <img src="">
-  <img src="">
+  <img src="docAssets/color-analyst.png">
+  <img src="docAssets/color-analyst-2.png">
 </details>
 
 ## What i have learned
