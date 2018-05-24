@@ -1,7 +1,7 @@
 <h1 align="center">Contactlist.</h1>
 
 <div align="center">
-  :globe_with_meridians::pushpin::bike: <img src="https://img.shields.io/badge/Browser Tech-done-green.svg">
+  :tada: <img src="https://img.shields.io/badge/Browser Tech-done-green.svg">
 </div>
 <div align="center">
   <strong>Readme for browser tech assignment</strong>
@@ -13,8 +13,12 @@
 ## Contactlist
 This is a contact list where you can search see a little bit of information on hover and on click you have more detailed information about the contact.
 
+All data is collected via FakerJS and can dynamically updated. When the server restarts there is new data.
+
 _Note: I probably should have experimented more! Due to time constraints I didn't made crazy enhancements._
 [Link for the project](link thing)
+
+## Redo
 
 | First try | Second try     |
 | :------------- | :------------- |
@@ -25,13 +29,13 @@ _Note: I probably should have experimented more! Due to time constraints I didn'
 | "" | Progressive enhancements (middle tier browsers) |
 | "" | Progressive enhancements (Animations) |
 | "" | Rewrite es6 to es5 |
-| "" | Ship it |
 
 ## Sources
 * [quirksmode table of contents about all selectors](https://quirksmode.org/dom/core/#fivemethods)
 * [Impressive web CSS3 support in IE9](https://www.impressivewebs.com/css3-support-ie9/)
 * [Can I Use](https://caniuse.com/)
 * [https://www.bram.us/](https://www.bram.us/2016/10/31/checking-if-a-browser-supports-es6/)
+* [Feature detection by Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
 
 ## Browser support
 
@@ -43,14 +47,11 @@ _The support for getElementsByClassName_
 ![Support for getElementById](docAssets/getElementById.png)
 _The support for getElementById_
 
-![Support for nextsibling](docAssets/NextSibling.png)
-_The support for NextSibling_
-
 ![support classList](docAssets/classlist.png)
 _The support for NextSibling_
 
 ![querySelectorAll support for ie8 is incomplete](docAssets/querySelectorAll.png)
-_querySelectorAll support for ie8 is incomplete but technically it works for what i need it to do._
+_querySelectorAll/querySelector support for ie8 is incomplete but technically it works for what i need it to do._
 
 ### CSS
 ![vw vmin vh vmax support](docAssets/vwvhvminvmax.png)
@@ -59,10 +60,19 @@ _vw vmin vh vmax support_
 ![Transistions](docAssets/transitions.png)
 _support CSS3 transitions_
 
-![grid](docAssets/)
-
+![grid](docAssets/grid.png)
+_support display: grid_
 
 ## Fallbacks
+
+* Fonts
+```CSS
+@font-face {
+  font-family: 'openSans-bold';
+  src: url('fonts/OpenSans-Bold.eot'); /* IE9 Compat Modes */
+  src: url('fonts/OpenSans-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+```
 
 * flexbox
 
@@ -114,6 +124,7 @@ _Note: the application actually better this way i noticed bugs when I did it dif
 ## ES6 fallback
 
 snippet from: [https://www.bram.us/](https://www.bram.us/2016/10/31/checking-if-a-browser-supports-es6/)
+
 ```JS
 var supportsES6 = function() {
   try {
@@ -155,7 +166,7 @@ _IE 7_
 ![internet explorer 8](docAssets/ie8.png)
 _ie 8_
 
-![internet explorer 9](docAssets/ie9.jpg)
+![internet explorer 9](docAssets/ie9.png)
 _ie 9_
 
 ![internet explorer 10](docAssets/ie10.png)
@@ -184,9 +195,9 @@ _Edge Windows_
 ### Firefox
 <details>
 <summary> Firefox v16 & latest </summary>
+
 <img src="docAssets/firefox-windows-16.png">
 _Firefox v16_
-
 
 <img src="docAssets/firefox-windows-latest.png">
 _Firefox latest_
@@ -199,8 +210,8 @@ _Firefox latest_
 ### Safari
 <details>
 <summary> Safari </summary>
-![Safari](docAssets/safari-1.png)
-![Safari](docAssets/safari-2.png)
+<img src="docAssets/safari-1.png">
+<img src="docAssets/safari-2.png">
 _Safari_
 </details>
 
@@ -212,25 +223,26 @@ _Safari_
 
 <details>
 <summary> chrome v22/ latest </summary>
-![chrome windows 7 v22 ](docAssets/chrome-windows-latest.jpg)
-_Chrome v22_
+<img src="docAssets/chrome-v22.png">
+_Chrome v22 (a very old version)_
 
-![Chrome windows 7 latest ](docAssets/chrome-windows-latest.jpg)
+<img src="docAssets/chrome-latest.png">
 _Chrome latest_
 </details>
 
 #### Notes
-* on v22 it works pretty good! Really solid! even the on clicks
-* latest the chrome shows here Sticky and scroll works smoothly
+* on v22 it works pretty good! Really solid! even the on clicks.
+* latest the chrome shows here Sticky and scroll works smoothly.
 
 ### UC Browser
 
 <details>
 <summary> UC browser </summary>
-![UC Browser on a device from 2013](docAssets/uc-browser-pad.png)
-![UC Browser on a device from 2013](docAssets/uc-browser-click.png)
+<img src="docAssets/uc-browser-pad.png" alt="UC Browser on a device from 2013">
+<img src="docAssets/uc-browser-click.png" alt="UC Browser on a device from 2013">
 
-_Android UC browser_
+_UC Browser on a device from 2013_
+
 </details>
 
 ### Notes
@@ -298,6 +310,7 @@ Some colour examples:
 <summary>Colour analyser</summary>
   <img src="docAssets/color-analyst.png">
   <img src="docAssets/color-analyst-2.png">
+  <img src="docAssets/colorblindness.png">
 </details>
 
 ## What i have learned
