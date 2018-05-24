@@ -2,8 +2,6 @@ if (!document.attachEvent) {
   var clickAble = document.getElementsByTagName("dd");
   var imageShow = document.getElementById('content');
 
-
-
   for (var i = 0; i < clickAble.length; i++) {
     clickAble[i].addEventListener('click', showPicture, true);
   }
@@ -18,6 +16,7 @@ if (!document.attachEvent) {
       <p>username${Math.floor(Math.random() * 2000 + 1)}</p>
     `
     imageShow.classList.remove('hidden');
+    imageShow.classList.add('animationleftToRight');
   }
 
   function hidePicture(event) {
