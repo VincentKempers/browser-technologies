@@ -21,14 +21,14 @@ _Note: I probabl/maybe should have experimented more! Due to time constraints I 
 [Link for the project](link thing)
 
 # Table of Content
-- [How to start](##how-to-start)
+- [How to start](#how-to-start)
 - [Progressive enhanced](#progressive-enhanced)
 - [Redo](#redo)
 - [Browser support](#browser-support)
 - [Fallbacks](#fallbacks)
 - [Browser tests](#browser-tests)
 - [Device Lab](#device-lab)
-- [Accessibility](#accessibility)
+- [Accessibility](#accessibilty)
 - [Sources](#sources)
 
 
