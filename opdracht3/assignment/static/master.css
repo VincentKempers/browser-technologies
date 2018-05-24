@@ -24,6 +24,27 @@
 
 .hidden {
   visibility: hidden;
+  opacity: 0;
+}
+
+#content {
+  width: 40%;
+  padding: 1em;
+  position: fixed;
+  right: 0;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  box-shadow: 2px lightgray;
+  animation: sweep 2s ease-in;
+}
+
+#content > img {
+  width: 5em;
+  border-radius: 5em;
+  margin: 0 auto;
+  align-items: center;
 }
 
 body {
@@ -54,7 +75,7 @@ body {
 @supports (display: grid) {
   .home {
     display: grid;
-    grid-template-columns: 15% 65% 20%;
+    grid-template-columns: 15% 50% 40%;
   }
 }
 
@@ -196,7 +217,6 @@ a {
 dl {
   margin: 0;
   padding: 24px 0 0 0;
-  width: 80%;
 }
 
 dt {
