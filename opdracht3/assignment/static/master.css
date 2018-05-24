@@ -39,18 +39,17 @@
   display: flex;
   flex-direction: column;
   z-index: +1;
-  background-color: gray;
-  border: 1px solid grey;
-  box-shadow: 2px lightgray;
+  background-color: #3879d9;
 }
 
 @media screen and (max-width: 45em) {
   .home {
     grid-template-columns: 20% 80%;
   }
+
   #content {
     width: auto;
-    background-color: grey;
+    background-color: #3879d9;
     position: relative;
     margin: 2em;
   }
@@ -102,19 +101,19 @@ body {
 @supports (display: grid) {
   .home {
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 20% 70%;
   }
 }
 
 .all-users {
-  display: block;
+  /* display: block; */
   float: left;
-  width: 80%;
+  width: 70%;
 }
 
 /*  letters */
 .letters {
-  width: 20%;
+  width: 10%;
   float: left;
   margin-right: 2em;
   margin-left: 2em;

@@ -33,7 +33,7 @@ for (var i = 0; i < 100; i++) {
 };
 
 app.get('/', function(req,res){
-  res.redirect('/contacts')
+  res.redirect('/contacts');
 })
 
 app.use('/contacts', function(req, res){
@@ -45,6 +45,7 @@ app.get('/:id', function(req, res) {
   for (var i = 0; i < allUsers.length; i++) {
     if (allUsers[i].username == req.params.id) {
       rightUser.push(allUsers[i]);
+      console.log(rightUser);
     }
   }
   res.render('detail', {fakePerson: rightUser});
