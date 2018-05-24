@@ -45,7 +45,6 @@ app.get('/:id', function(req, res) {
   for (var i = 0; i < allUsers.length; i++) {
     if (allUsers[i].username == req.params.id) {
       rightUser.push(allUsers[i]);
-      console.log(rightUser);
     }
   }
   res.render('detail', {fakePerson: rightUser});
