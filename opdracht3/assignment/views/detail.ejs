@@ -19,13 +19,13 @@
       <summary role="button">Website</summary>
       <p><a href= <%= user.website %> ><%= user.website %></a></p>
     </details>
-    <details>
+    <details open>
       <summary role="button">Street</summary>
       <p><%= user.address.streetC %></p>
       <p><%= user.address.zipcode %></p>
       <p><%= user.address.country %></p>
     </details>
-    <details>
+    <details open>
       <summary role="button">Company</summary>
       <p><%= user.company.name %></p>
       <p><%= user.company.catchPhrase %></p>
