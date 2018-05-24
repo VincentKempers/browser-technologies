@@ -106,7 +106,6 @@ body {
 }
 
 .all-users {
-  /* display: block; */
   float: left;
   width: 70%;
 }
@@ -230,6 +229,7 @@ main > details {
 
 main details > summary {
   font-weight: bold;
+  max-width: 40em;
 }
 
 main details > p {
@@ -238,8 +238,9 @@ main details > p {
 }
 
 p {
-  background: lightgray;
+  background: #b1caef;
   padding: .8em;
+max-width: 40em;
 }
 
 a {
