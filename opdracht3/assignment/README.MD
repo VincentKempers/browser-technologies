@@ -4,7 +4,8 @@
   :tada: <img src="https://img.shields.io/badge/Browser Tech-done-green.svg">
 </div>
 <div align="center">
-  <strong>Readme for browser tech assignment</strong>
+  <img src="docAssets/header-image.png" alt="product">
+  <strong>A browser technologies assignment</strong>
 </div>
 <br />
 
@@ -17,6 +18,14 @@ All data is collected via FakerJS and can dynamically updated. When the server r
 
 _Note: I probably should have experimented more! Due to time constraints I didn't made crazy enhancements._
 [Link for the project](link thing)
+
+## How to start
+* Clone the repo [here](https://github.com/VincentKempers/browser-technologies.git).
+* Navigate to `/opdracht3/assignment`
+* Go to the terminal and type `npm install`.
+* To run:
+  * The development enviroment `npm run dev`.
+  * The production `npm start`.
 
 ## Redo
 
