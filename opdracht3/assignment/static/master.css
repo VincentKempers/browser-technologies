@@ -80,6 +80,9 @@ body {
   padding: 0;
 }
 
+h1 {
+  font-family: openSans-bold;
+}
 .home--header {
   background: #4b6cb7; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #4b6cb7, #182848); /* webkit support*/
@@ -185,7 +188,7 @@ ul {
   text-align: center;
 }
 
-.detail--header > img {
+.detail--header .ugh > img {
   margin-top: 2em;
   width: 8em;
   border-radius: 5em;
@@ -244,7 +247,7 @@ max-width: 40em;
 }
 
 a {
-  color: #4b6cb7;
+  color: darkblue;
 }
 
 dl {
@@ -260,6 +263,8 @@ dt {
   position: -webkit-sticky;
   position: sticky;
   top: -1px;
+  font-family: openSans-bold;
+  font-size: 1.5em;
 }
 
 dd {
@@ -269,7 +274,7 @@ dd {
   font-weight: bold;
   margin: 0;
   padding: 0 0 0 12px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid lightgray;
 }
 
 dd:hover {
@@ -280,10 +285,12 @@ footer {
   margin-top: 2em;
 }
 
-footer > a {
+.ugh > a {
   margin: 2em 0 0 1.4em;
   padding: .7em;
-  background-color: #3f5a9a;
+  background-color: black;
   color: white;
   text-decoration: none;
+  position: absolute;
+  left: 0;
 }

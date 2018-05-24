@@ -3,7 +3,11 @@
 <section class="detail--page">
   <% fakePerson.forEach(function(user){ %>
   <div class="detail--header">
-    <img src="static/imgs/random-user_imageM4.jpg" alt="a photo of <%= user.name %>">
+    <div class="ugh">
+      <a href="/contacts">< go back</a>
+      <img src="static/imgs/random-user_imageM4.jpg" alt="a photo of <%= user.name %>">
+    </div>
+
     <h1><%= user.name %></h1>
   </div>
   <main>
@@ -35,7 +39,7 @@
  <% }); %>
 </section>
 <footer>
-  <a href="/contacts">< go back </a>
+
 </footer>
 
 <%- include('footer'); -%>
