@@ -11,15 +11,28 @@
 
 -------
 
-## Contactlist
+# Contactlist
 This is a contact list where you can search see a little bit of information on hover and on click you have more detailed information about the contact.
+This simple "app" doesn't really use complex design. You look up what you need click on the contact and you view extra information.
 
 All data is collected via FakerJS and can dynamically updated. When the server restarts there is new data.
 
-_Note: I probably should have experimented more! Due to time constraints I didn't made crazy enhancements._
+_Note: I probabl/maybe should have experimented more! Due to time constraints I didn't made crazy enhancements._
 [Link for the project](link thing)
 
-## How to start
+# Table of Content
+- [How to start](##how-to-start)
+- [Progressive enhanced](#progressive-enhanced)
+- [Redo](#redo)
+- [Browser support](#browser-support)
+- [Fallbacks](#fallbacks)
+- [Browser tests](#browser-tests)
+- [Device Lab](#device-lab)
+- [Accessibility](#accessibility)
+- [Sources](#sources)
+
+
+# How to start
 * Clone the repo [here](https://github.com/VincentKempers/browser-technologies.git).
 * Navigate to `/opdracht3/assignment`
 * Go to the terminal and type `npm install`.
@@ -27,11 +40,21 @@ _Note: I probably should have experimented more! Due to time constraints I didn'
   * The development enviroment `npm run dev`.
   * The production `npm start`.
 
-## Redo
 
+
+
+# Progressive enhanced
+| Core functionality | enhancements | Latest |
+| :------------- | :------------- |
+| You can view a list with contacts | You can filter through the list | Smooth scrolling |
+| You can click on an anchor to go to the right letter | CSS gradients  | CSS Animations |
+| You can click on a contact | Better layout | Grid/details |
+| You can view a contact information in detail | on click view for contact list | Sticky position |
+
+# Redo
 | First try | Second try     |
 | :------------- | :------------- |
-| I had nothing | Figure out how the `@supports` work |
+| "" | Figure out how the `@supports` work |
 | "" | FakerJS, Dynamic Data, Templating |
 | "" | Figure out what to make and how it will take shape |
 | "" | IE **partial 7**,**8**,9,10,11 support |
@@ -39,14 +62,7 @@ _Note: I probably should have experimented more! Due to time constraints I didn'
 | "" | Progressive enhancements (Animations) |
 | "" | Rewrite es6 to es5 |
 
-## Sources
-* [quirksmode table of contents about all selectors](https://quirksmode.org/dom/core/#fivemethods)
-* [Impressive web CSS3 support in IE9](https://www.impressivewebs.com/css3-support-ie9/)
-* [Can I Use](https://caniuse.com/)
-* [https://www.bram.us/](https://www.bram.us/2016/10/31/checking-if-a-browser-supports-es6/)
-* [Feature detection by Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-
-## Browser support
+# Browser support
 
 ### Javascript
 
@@ -72,9 +88,10 @@ _support CSS3 transitions_
 ![grid](docAssets/grid.png)
 _support display: grid_
 
-## Fallbacks
+# Fallbacks
 
-* Fonts
+Fonts
+
 ```CSS
 @font-face {
   font-family: 'openSans-bold';
@@ -83,7 +100,7 @@ _support display: grid_
 }
 ```
 
-* flexbox
+Scroll behaviour / `@supports`
 
 ```CSS
 
@@ -93,7 +110,11 @@ _support display: grid_
   }
 }
 
+```
 
+* flexbox
+
+```CSS
 element {
 /* for older browsers IE9 and down the line */
   display: block;
@@ -105,7 +126,7 @@ Newer browsers wont */
 }
 ```
 
-* My fallback for add `.attachEvent`
+* My feature deteection for add `.attachEvent`
 
 ```JS
 if (document.getElementById && document.getElementsByTagName && document.attachEvent) {
@@ -130,7 +151,7 @@ if (document.getElementById && document.getElementsByTagName && document.attachE
 ```
 _Note: the application actually better this way i noticed bugs when I did it diffrently but this actually supports ie8 perfectly_
 
-## ES6 fallback
+# ES6 fallback
 
 snippet from: [https://www.bram.us/](https://www.bram.us/2016/10/31/checking-if-a-browser-supports-es6/)
 
@@ -154,17 +175,18 @@ if (supportsES6) {
 
 Unfortunatly this didn't work for me so i re-wrote everything back to ES5.
 
-## Browser support
-Because of the low Javascript usage are there only some CSS fallbacks needed to be created.
-* Em's work til IE 9 without being "that" buggy.
-* Usage of `display: flex;` & `display: grid;`.
 
 
-## Browser tests
+
+# Browser tests
 Ways of testing:
 * My own windows machine: Internet Explorer 11 & 10/ Mozilla Firefox/ Google Chrome
 * [Browserstack](https://www.browserstack.com/)
 * Device Lab
+
+## Browser support
+Because of the low Javascript usage are there only some CSS fallbacks needed to be created.
+* Usage of `display: flex;` & `display: grid;`.
 
 ### Internet explorer
 <details>
@@ -195,6 +217,7 @@ _Edge Windows_
 
 #### Notes
 * On IE7 it works for the most part only the part that doesn't really work is the onclick.
+* `visibility: hidden;` didn't work on IE7
 * On IE8 I really didn't want to do that much crazy things but for what it's worth, it WORKS :tada:.
 * On IE9 it's a bit of the same experience on ie8 but it actually works a bit smoother. Details still don't work properly but if you go on a details page you actually want to see everything.
 * On IE10 Animations start to work now! You can see the progression on the page. Filter works properly and you view everything.
@@ -214,7 +237,10 @@ _Firefox latest_
 </details>
 
 ##### Notes
-* There were no bugs found. with or without JS & CSS.
+* [x] Version 16 had details :books:
+* [x] Filter worked!
+* [x] No weird quircks except no animations v16.
+* [x] latest everything worked!
 
 ### Safari
 <details>
@@ -251,70 +277,96 @@ _Chrome latest_
 <img src="docAssets/uc-browser-click.png" alt="UC Browser on a device from 2013">
 
 _UC Browser on a device from 2013_
-
 </details>
 
 ### Notes
 * It works!
-* The emulation ran a bit slow so i couldn't really tell if there were animations. The browser doesn't really support animations but it works solid.
+* The emulation ran a bit slow so i couldn't really tell if there were animations. _But to be safe_ browser doesn't really support animations but it works solid.
 
-## Mobile browsers/ Device Lab
+_Note: The Opera mobile emulator didn't work for me anymore so i couldn't test on Opera Mini and/or Opera Mobile_
+
+# Device Lab
 
 ### Samsung phone
 <details>
 <summary> Samsung phone </summary>
-<img src="">
-<h3> Notes</h3>
-<ul>
-  <li>This works fine</li>
-</ul>
+<img src="docAssets/samsung-bug.JPG">
+_rendering bug_
+<img src="docAssets/samsung-phone.JPG">
+_works perfectly?_
 </details>
+
+<h4> Notes </h4>
+<ul>
+  <li>First time it couldn't render the paint for some reason?</li>
+  <li>Filter works perfectly fine</li>
+  <li>Onclick works!</li>
+  <li>didn't support grid so edited a bit of the `@support` tag</li>
+</ul>
+
 
 ### android phone QP
 <details>
 <summary> Android QP </summary>
-<img src="">
-<h3> Notes</h3>
-<ul>
-  <li>This works fine</li>
-</ul>
+<img src="docAssets/qp.JPG">
 </details>
 
-### old android phone QP
-<details>
-<summary> older android QP </summary>
-  <img src="">
-<h3> Notes</h3>
+<h4> Notes </h4>
 <ul>
-  <li>This works fine</li>
+  <li>First time it couldn't render the paint for some reason?</li>
+  <li>Filter works perfectly fine</li>
+  <li>Onclick works!</li>
+  <li>didn't support grid so edited a bit of the `@support` tag</li>
 </ul>
-</details>
 
 ### Nexus
 <details>
 <summary> Nexus test </summary>
-<img src="">
-<h3> Notes</h3>
-<ul>
-  <li>This works fine</li>
-</ul>
+<img src="docAssets/Nexus.JPG">
 </details>
 
-### Windows tablet
+<h4> Notes </h4>
+- [x] Filter worked
+- [x] some spacing issues which were fixed
+- [x] click event works fine
 
+### Windows surface tablet
 <details>
 <summary> Windows tablet </summary>
-<img src="">
-<h3> Notes</h3>
-<ul>
-  <li>This works fine</li>
-</ul>
+
+<img src="docAssets/windows-surface-sticky.JPG">
+
+<img src="docAssets/windows-surface.JPG">
+
 </details>
 
-## Accessibilty
+<h4> Notes </h4>
+- [x] Filter works fine
+- [x] Click event works with animations
+
+### iPad
+
+<details>
+<summary> Ipad </summary>
+<img src="docAssets/ipad-fixed.JPG">
+<img src="docAssets/ipad.JPG">
+</details>
+
+<h4> Notes </h4>
+- [x] Filter works fine
+- [x] Click event works with animations
+- [x] Didn't had spacing issues worked as is.
+
+
+# Accessibilty
 
 I tried to keep focus on colours. I used different blues and made use of a lot of white colours. I personally think that it works well.
-Some colour examples:
+#### programs i used:
+- [sim daltonism](https://itunes.apple.com/us/app/sim-daltonism/id693112260)
+- [Colour Contrast Analyser](https://developer.paciellogroup.com/resources/contrastanalyser/)
+- [aXe Chrome Plugin](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd)
+
+### Some results:
 <details>
 <summary>Colour analyser</summary>
   <img src="docAssets/color-analyst.png">
@@ -322,8 +374,16 @@ Some colour examples:
   <img src="docAssets/colorblindness.png">
 </details>
 
-## What i have learned
+# What i have learned
 * ES6 support that didn't work for me.
 * I noticed that the fallback could be tricky sometimes.
 * The existence of `attachEvent`
 * proper use of fallbacks
+
+
+# Sources
+* [quirksmode table of contents about all selectors](https://quirksmode.org/dom/core/#fivemethods)
+* [Impressive web CSS3 support in IE9](https://www.impressivewebs.com/css3-support-ie9/)
+* [Can I Use](https://caniuse.com/)
+* [https://www.bram.us/](https://www.bram.us/2016/10/31/checking-if-a-browser-supports-es6/)
+* [Feature detection by Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
