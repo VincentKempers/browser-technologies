@@ -238,7 +238,7 @@ _Firefox latest_
 
 ##### Notes
 * [x] Version 16 had details :books:
-* [x] Filter worked!
+* [x] Filter works!
 * [x] No weird quircks except no animations v16.
 * [x] latest everything worked!
 
@@ -297,6 +297,7 @@ _works perfectly?_
 </details>
 
 <h4> Notes </h4>
+
 <ul>
   <li>First time it couldn't render the paint for some reason?</li>
   <li>Filter works perfectly fine</li>
@@ -312,6 +313,7 @@ _works perfectly?_
 </details>
 
 <h4> Notes </h4>
+
 <ul>
   <li>First time it couldn't render the paint for some reason?</li>
   <li>Filter works perfectly fine</li>
@@ -320,17 +322,20 @@ _works perfectly?_
 </ul>
 
 ### Nexus
+
 <details>
 <summary> Nexus test </summary>
 <img src="docAssets/Nexus.JPG">
 </details>
 
 <h4> Notes </h4>
-- [x] Filter worked
+
+- [x] Filter works
 - [x] some spacing issues which were fixed
 - [x] click event works fine
 
 ### Windows surface tablet
+
 <details>
 <summary> Windows tablet </summary>
 
@@ -341,6 +346,7 @@ _works perfectly?_
 </details>
 
 <h4> Notes </h4>
+
 - [x] Filter works fine
 - [x] Click event works with animations
 
@@ -355,7 +361,7 @@ _works perfectly?_
 <h4> Notes </h4>
 - [x] Filter works fine
 - [x] Click event works with animations
-- [x] Didn't had spacing issues worked as is.
+- [x] Didn't had spacing issues works as is.
 
 
 # Accessibilty
