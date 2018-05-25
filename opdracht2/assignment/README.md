@@ -16,7 +16,7 @@ _Note: I probably should have experimented more! Due to time constraints I didn'
 
 | What i had to fix | Fixed     |
 | :------------- | :------------- |
-| I had to test on IE8  | Tested on IE8 |
+| I had to test on IE8  | Show result on IE8 |
 | Add some text instead of lorem | wrote some clever stuff about some teachers |
 
 ## Browser support
