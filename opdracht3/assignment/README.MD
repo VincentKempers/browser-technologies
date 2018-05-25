@@ -79,7 +79,7 @@ _The support for NextSibling_
 _querySelectorAll/querySelector support for ie8 is incomplete but technically it works for what i need it to do._
 
 ### CSS
-![vw vmin vh vmax support]( docAssets/vwvhvminvmax.png)
+![vw vmin vh vmax support](docAssets/vwvhvminvmax.png)
 _vw vmin vh vmax support_
 
 ![Transistions]( docAssets/transitions.png)
