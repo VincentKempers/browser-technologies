@@ -18,7 +18,7 @@ This simple "app" doesn't really use complex design. You look up what you need c
 All data is collected via FakerJS and can dynamically updated. When the server restarts there is new data.
 
 _Note: I probabl/maybe should have experimented more! Due to time constraints I didn't made crazy enhancements._
-[Link for the project](link thing)
+[Link for the project](https://assignment-jmeyfjquxt.now.sh/contacts)
 
 # Table of Content
 - [How to start](#how-to-start)
