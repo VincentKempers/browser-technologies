@@ -12,6 +12,13 @@ _Note: I probably should have experimented more! Due to time constraints I didn'
 * [Impressive web CSS3 support in IE9](https://www.impressivewebs.com/css3-support-ie9/)
 * [can i use](https://caniuse.com/)
 
+# Redo
+
+| What i had to fix | Fixed     |
+| :------------- | :------------- |
+| I had to test on IE8  | Tested on IE8 |
+| Add some text instead of lorem | wrote some clever stuff about some teachers |
+
 ## Browser support
 
 ### Javascript
@@ -108,11 +115,18 @@ Ways of testing:
 * Device Lab
 
 ### Internet explorer
+![Internet explorer](docImages/IE8.png)
+_ie 8_
+
 ![internet explorer](docImages/ie9-1.jpg)
 ![internet explorer](docImages/ie9-2.jpg)
 _ie 9_
 
 ### bugs
+* On ie8 it doesn't work.
+* The assignment didn't call for ie8 support.
+* But the basic functionality _showing text_ works.
+
 * the target opens a new window. Which is just not what i wanted.
 * Weirdly enough it worked on the first try and the overlay worked inside the browser.
 * probably the target got messed up.
