@@ -4,7 +4,7 @@
   :tada: <img src="https://img.shields.io/badge/Browser Tech-done-green.svg">
 </div>
 <div align="center">
-  <img src="docAssets/header-image.png" alt="product">
+  <img src="../docAssets/header-image.png" alt="product">
   <strong>A browser technologies assignment</strong>
 </div>
 <br />
@@ -66,26 +66,26 @@ _Note: I probabl/maybe should have experimented more! Due to time constraints I 
 
 ### Javascript
 
-![Support for getElementsByClassName](docAssets/getElementsByClassName.png)
+![Support for getElementsByClassName](../docAssets/getElementsByClassName.png)
 _The support for getElementsByClassName_
 
-![Support for getElementById](docAssets/getElementById.png)
+![Support for getElementById](../docAssets/getElementById.png)
 _The support for getElementById_
 
-![support classList](docAssets/classlist.png)
+![support classList](../docAssets/classlist.png)
 _The support for NextSibling_
 
-![querySelectorAll support for ie8 is incomplete](docAssets/querySelectorAll.png)
+![querySelectorAll support for ie8 is incomplete](../docAssets/querySelectorAll.png)
 _querySelectorAll/querySelector support for ie8 is incomplete but technically it works for what i need it to do._
 
 ### CSS
-![vw vmin vh vmax support](docAssets/vwvhvminvmax.png)
+![vw vmin vh vmax support](../docAssets/vwvhvminvmax.png)
 _vw vmin vh vmax support_
 
-![Transistions](docAssets/transitions.png)
+![Transistions](../docAssets/transitions.png)
 _support CSS3 transitions_
 
-![grid](docAssets/grid.png)
+![grid](../docAssets/grid.png)
 _support display: grid_
 
 # Fallbacks
@@ -191,26 +191,26 @@ Because of the low Javascript usage are there only some CSS fallbacks needed to 
 ### Internet explorer
 <details>
 <summary> Internet explorer </summary>
-![Internet Explorer 7](docAssets/ie7.png)
+![Internet Explorer 7](../docAssets/ie7.png)
 _IE 7_
 
-![internet explorer 8](docAssets/ie8.png)
+![internet explorer 8](../docAssets/ie8.png)
 _ie 8_
 
-![internet explorer 9](docAssets/ie9.png)
+![internet explorer 9](../docAssets/ie9.png)
 _ie 9_
 
-![internet explorer 10](docAssets/ie10.png)
+![internet explorer 10](../docAssets/ie10.png)
 _ie 10_
 
-![internet explorer 11](docAssets/ie11.png)
+![internet explorer 11](../docAssets/ie11.png)
 _IE 11_
 </details>
 
 ### Microsoft Edge
 <details>
 <summary> microsoft edge </summary>
-<img src="docAssets/edge-windows.png">
+<img src="../docAssets/edge-windows.png">
 _Edge Windows_
 </details>
 
@@ -228,10 +228,10 @@ _Edge Windows_
 <details>
 <summary> Firefox v16 & latest </summary>
 
-<img src="docAssets/firefox-windows-16.png">
+<img src="../docAssets/firefox-windows-16.png">
 _Firefox v16_
 
-<img src="docAssets/firefox-windows-latest.png">
+<img src="../docAssets/firefox-windows-latest.png">
 _Firefox latest_
 
 </details>
@@ -245,8 +245,8 @@ _Firefox latest_
 ### Safari
 <details>
 <summary> Safari </summary>
-<img src="docAssets/safari-1.png">
-<img src="docAssets/safari-2.png">
+<img src="../docAssets/safari-1.png">
+<img src="../docAssets/safari-2.png">
 _Safari_
 </details>
 
@@ -258,10 +258,10 @@ _Safari_
 
 <details>
 <summary> chrome v22/ latest </summary>
-<img src="docAssets/chrome-v22.png">
+<img src="../docAssets/chrome-v22.png">
 _Chrome v22 (a very old version)_
 
-<img src="docAssets/chrome-latest.png">
+<img src="../docAssets/chrome-latest.png">
 _Chrome latest_
 </details>
 
@@ -273,8 +273,8 @@ _Chrome latest_
 
 <details>
 <summary> UC browser </summary>
-<img src="docAssets/uc-browser-pad.png" alt="UC Browser on a device from 2013">
-<img src="docAssets/uc-browser-click.png" alt="UC Browser on a device from 2013">
+<img src="../docAssets/uc-browser-pad.png" alt="UC Browser on a device from 2013">
+<img src="../docAssets/uc-browser-click.png" alt="UC Browser on a device from 2013">
 
 _UC Browser on a device from 2013_
 </details>
@@ -290,9 +290,9 @@ _Note: The Opera mobile emulator didn't work for me anymore so i couldn't test o
 ### Samsung phone
 <details>
 <summary> Samsung phone </summary>
-<img src="docAssets/samsung-bug.JPG">
+<img src="../docAssets/samsung-bug.JPG">
 _rendering bug_
-<img src="docAssets/samsung-phone.JPG">
+<img src="../docAssets/samsung-phone.JPG">
 _works perfectly?_
 </details>
 
@@ -309,7 +309,7 @@ _works perfectly?_
 ### android phone QP
 <details>
 <summary> Android QP </summary>
-<img src="docAssets/qp.JPG">
+<img src="../docAssets/qp.JPG">
 </details>
 
 <h4> Notes </h4>
@@ -325,7 +325,7 @@ _works perfectly?_
 
 <details>
 <summary> Nexus test </summary>
-<img src="docAssets/Nexus.JPG">
+<img src="../docAssets/Nexus.JPG">
 </details>
 
 <h4> Notes </h4>
@@ -339,9 +339,9 @@ _works perfectly?_
 <details>
 <summary> Windows tablet </summary>
 
-<img src="docAssets/windows-surface-sticky.JPG">
+<img src="../docAssets/windows-surface-sticky.JPG">
 
-<img src="docAssets/windows-surface.JPG">
+<img src="../docAssets/windows-surface.JPG">
 
 </details>
 
@@ -354,8 +354,8 @@ _works perfectly?_
 
 <details>
 <summary> Ipad </summary>
-<img src="docAssets/ipad-fixed.JPG">
-<img src="docAssets/ipad.JPG">
+<img src="../docAssets/ipad-fixed.JPG">
+<img src="../docAssets/ipad.JPG">
 </details>
 
 <h4> Notes </h4>
@@ -375,9 +375,9 @@ I tried to keep focus on colours. I used different blues and made use of a lot o
 ### Some results:
 <details>
 <summary>Colour analyser</summary>
-  <img src="docAssets/color-analyst.png">
-  <img src="docAssets/color-analyst-2.png">
-  <img src="docAssets/colorblindness.png">
+  <img src="../docAssets/color-analyst.png">
+  <img src="../docAssets/color-analyst-2.png">
+  <img src="../docAssets/colorblindness.png">
 </details>
 
 # What i have learned
