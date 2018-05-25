@@ -4,7 +4,7 @@
   :tada: <img src="https://img.shields.io/badge/Browser Tech-done-green.svg">
 </div>
 <div align="center">
-  <img src=" docAssets/header-image.png" alt="product">
+  <img src="docAssets/header-image.png" alt="product">
   <strong>A browser technologies assignment</strong>
 </div>
 <br />
