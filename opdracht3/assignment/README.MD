@@ -44,7 +44,7 @@ _Note: I probabl/maybe should have experimented more! Due to time constraints I 
 # Progressive enhanced
 
 | Core functionality | enhancements | Latest |
-| :------------- | :------------- |
+| :------------- | :------------- | :------------- |
 | You can view a list with contacts | You can filter through the list | Smooth scrolling |
 | You can click on an anchor to go to the right letter | CSS gradients  | CSS Animations |
 | You can click on a contact | Better layout | Grid/details |
